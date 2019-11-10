@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Muli&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Registrar</title>
+  </head>
+  <body>
+    <header class="registro">
+      <h2>Registro de Usuario</h2>
+      <form id="form-login" action="#" method="post" >
+        <label for="nombre">Nombre:</label>
+        <input name="nombre" type="text" id="nombre" class="nombre" placeholder="Nombre" autofocus=""/ >
+        <br>
+        <br>
+        <!--=============================================================================================-->
+        <!--La sisguientes 2 líneas son para agregar campos al formulario con sus respectivos labels-->
+        <!--Puedes usar tantas como necesites-->
+        <label for="apellidos">Apellidos:</label>
+        <input name="apellidos" type="text" id="apellidos" class="apellidos" placeholder="Apellidos" />
+        <!--=============================================================================================-->
+        <br>
+        <br>
+        <label for="correo">Correo:</label>
+        <input name="correo" type="text" id="correo" class="correo" placeholder="e-mail" />
+        <br>
+        <br>
+        <label for="pass">Password:</label>
+        <input name="pass" type="password" id="pass" class="pass" placeholder="Contraseña"/ >
+        <br>
+        <br>
+        <label for="repass">Repetir Password:</label>
+        <input name="repass" type="password" id="repass" class="repass" placeholder="Repetir contraseña" />
+        <br>
+        <br>
+        <button type="submit" name="submit" class="button">Registrar</button>
+        <!--<input name="submit" type="submit" id="boton" value="Registrar" class="button"/>-->
+      </form>
+    </header>
+  </body>
+</html>
