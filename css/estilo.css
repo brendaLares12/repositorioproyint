@@ -55,7 +55,7 @@ h1{
   background-size: cover;
 }
 /*ESTILO DE PAGINA LOGIN*/
-.login{
+.login, .registro{
   text-align: center;
   margin-top: 95px;
   color: black;
