@@ -4,21 +4,21 @@
 }
 
 body{
-  background-color:#00ced1;
+  background-color: whitesmoke;
   font-family:'Muli',sans-serif;
 }
 .container{
-  width: 100%;
+  width: 800%;
   margin: 0 auto;
 }
 /*ESTILO EN DEGRADE DE LA PAGINA*/
 header{
   text-align: center;
-  background: -moz-radial-gradient(50% 50%, #fff, #00ced1);
+  background: -moz-radial-gradient(50% 50%, #fff, #4a8c8d);
 	background: -webkit-radial-gradient(50% 50%, #fff, #00ced1);
 	background: -o-radial-gradient(50% 50%, #fff, #00ced1);
 	background: -ms-radial-gradient(50% 50%,#fff, #00ced1);
-	background: radial-gradient(50% 50%,#fff, #00ced1);
+	background: radial-gradient(50% 50%,#fff, pink);
 }
 /*tamaño del icono*/
 header img{
@@ -35,17 +35,31 @@ h1{
 
 .nav-link{
   color:black;
+  font-family:'Literata', serif; 
 }
+
 .btn-outline-success{
   color: black;
   border-color: black;
 }
-/*estilo caruosel*/
-.carousel-inner{
-  height: 500px;
-
+.navbar-brand {
+  font-family:'Literata', serif;
 }
-.carousel-item img{
+.nav-link{
+  font-family:'Literata', serif;
+}
+.dropdown-menu .dropdown-item {
+  font-family:'Literata', serif;
+}
+
+
+
+/*diseño carrusel*/
+.carousel-inner{
+  height:300px;
+}
+
+.carrousel-item img{
   height: 70vh;
   min-height: 300px;
   background: no-repeat center center scroll;
@@ -54,8 +68,10 @@ h1{
   -o-background-size: cover;
   background-size: cover;
 }
+
 /*ESTILO DE PAGINA LOGIN*/
 .login, .registro{
+  font-family:'Literata', serif;
   text-align: center;
   margin-top: 95px;
   color: black;
@@ -63,7 +79,13 @@ h1{
   padding: 5px;
   font-size: 18px;
 }
+
+input{
+  font-family:'Literata', serif;
+}
+
 button{
+  font-family:'Literata', serif;
   text-align: center;
   color: white;
   background-color: grey;
