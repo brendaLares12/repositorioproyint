@@ -57,6 +57,7 @@ h1{
 
 
 /*diseño carrusel*/
+
 .carousel-inner{
   height:400px;
 }
@@ -93,4 +94,12 @@ button{
   background-color: grey;
   padding: 5px;
   font-size: 18px;
+}
+
+/*SECCIÓN PAPELERÍA*/
+section {
+display: flex;
+}
+section {
+  justify-content:space-evenly;
 }
