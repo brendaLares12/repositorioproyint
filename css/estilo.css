@@ -8,22 +8,19 @@ body{
   font-family:'Muli',sans-serif;
 }
 .container{
-  width: 800%;
-  margin: 0 auto;
+  width: 100%;
 }
 /*ESTILO EN DEGRADE DE LA PAGINA*/
 header{
   text-align: center;
-  background: -moz-radial-gradient(50% 50%, #fff, #4a8c8d);
-	background: -webkit-radial-gradient(50% 50%, #fff, #00ced1);
-	background: -o-radial-gradient(50% 50%, #fff, #00ced1);
-	background: -ms-radial-gradient(50% 50%,#fff, #00ced1);
 	background: radial-gradient(50% 50%,#fff, pink);
 }
 /*tamaño del icono*/
 header img{
   width: 100px;
   height: 100px;
+  position: relative;
+  top: -13px;
 }
 /*diseño de libreria lablic*/
 h1{
@@ -54,7 +51,12 @@ h1{
 .btn-group{
   float: right;
 }
-
+/*color boton busqueda y de boton ver productos*/
+.btn-primary {
+    color: #fff;
+    background-color: pink;
+    border-color: darkgrey;
+}
 
 /*diseño carrusel*/
 
@@ -95,11 +97,37 @@ button{
   padding: 5px;
   font-size: 18px;
 }
-
-/*SECCIÓN PAPELERÍA*/
-section {
-display: flex;
+h2{
+  text-align: center;
+  padding: 15px;
 }
-section {
-  justify-content:space-evenly;
+h5{
+  text-align: center;
+}
+/*SECCIÓN PAPELERÍA*/
+footer{
+  border-top: 2px solid pink;
+  margin-top: 55px;
+  height: 100px;
+}
+h6{
+  text-align: center;
+}
+.sociales{
+  text-align: center;
+}
+.sociales button{
+  background-color: pink;
+  border-radius: 50%;
+  border-color: gold;
+
+}
+h4{
+  font-size: 15px;
+  text-align: center;
+}
+.ubicacion p{
+  font-size: 12px;
+  text-align: center;
+  margin: 2px;
 }
