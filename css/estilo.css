@@ -6,10 +6,10 @@
 body{
   background-color: whitesmoke;
   font-family:'Muli',sans-serif;
+  margin: 0 auto;
 }
 .container{
   width: 100%;
-  overflow: hidden;
 }
 /*ESTILO EN DEGRADE DE LA PAGINA*/
 header{
@@ -94,7 +94,6 @@ button{
   font-family:'Literata', serif;
   text-align: center;
   color: white;
-  background-color: grey;
   padding: 5px;
   font-size: 18px;
 }
