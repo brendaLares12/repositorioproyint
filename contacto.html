@@ -21,34 +21,56 @@
         <header>
           <img src="img/icono-pag.png" alt="icono">
           <h1>Libreria Lablic</h1>
+          <div class="btn-group" role="group">
+          <button id="btnGroupDrop1" type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user"></i>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <a class="dropdown-item" href="login.html">Ingresar</a>
+            <a class="dropdown-item" href="registrar.html">Registrar</a>
+          </div>
+        </div>
         </header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <a class="navbar-brand" href="#">Menu</a>
+      <a class="navbar-brand" href="home.html">Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
-          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Libros</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Literatura clásica</a>
+              <a class="dropdown-item" href="#">Literatura Infantil y Juvenil</a>
+              <div class="dropdown-divider"></div>
+            </div>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Papelería</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Útiles Escolares</a>
+                <a class="dropdown-item" href="#">Libretas y Agendas</a>
+                <div class="dropdown-divider"></div>
+              </div>
+
           <li class="nav-item">
             <a class="nav-link" href="faq.html">F.A.Q</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html"> Login</a>
+            <a class="nav-link" href="contacto.html">Contacto</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Ingresa palabra clave">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+          <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+            <i class="fas fa-search"></i>
+          </button>
         </form>
+        <br>
       </div>
     </div>
-    <main>
+    </nav>
       <div class="contenedor-contacto">
         <h2>CONTACTO</h2>
         <div class="contenedor-form">
