@@ -9,6 +9,7 @@ body{
 }
 .container{
   width: 100%;
+  overflow: hidden;
 }
 /*ESTILO EN DEGRADE DE LA PAGINA*/
 header{
@@ -131,10 +132,39 @@ h4{
   text-align: center;
   margin: 2px;
 }
-<<<<<<< HEAD
-=======
-section {
-  justify-content:space-evenly;
+.encabezado-contacto, .contenedor-contacto, form{
+  display: block;
+}
+.contenedor-contacto form{
+  width: 50%;
+
 }
 
->>>>>>> 96a1dc57b1950d3f8b69e2be0ee83d070b6ca47a
+.formulario label{
+  text-align: left;
+}
+.formulario input{
+  width: 100%;
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+.formulario input, .formulario textarea {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1em;
+  }
+.boton-enviar{
+  background-color: pink;
+  border-color: gold;
+  width: 100%;
+}
+.contenedor-form img{
+  float: right;
+  width: 520px;
+  height: 400px;
+  margin-top: -450px;
+}
