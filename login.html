@@ -4,23 +4,52 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Muli&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6ac70a7b0a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Literata:400,700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/estilo.css">
-    <title>Login</title>
+    <title>Libreria Lablic</title>
+    <link rel="icon" type="image/png" href="img/icono-pag.png" />
   </head>
   <body>
-    <div class="container">
       <header class="login">
-        <h2>Ingresar Usuario</h2>
-        <form enctype="text/plain" method="POST" action="index.php">
-              Usuario: <input type="text" name="user" placeholder="Ingresa nombre de usuario" minlength="10" required=true><br></br>
-              Contraseña: <input type="password" name="direccion" placeholder="Ingresa contraseña" minlength="10" required=true><br></br>
-              Correo: <input type="email" name="correo" placeholder="E-mail" minlength="20" required=true><br></br>
-          <button  name="button" >Ingresar</button>
-          <FORM NAME="buttonbar">
-<INPUT TYPE="button" VALUE="Volver" onClick="history.back()">
-</FORM>
-          </form>
+          <h2>Ingresar Usuario</h2>
+          <div class="contenedor-form">
+            <form class="" enctype="text/plain" method="POST" action="index.php">
+                  <label for="">Usuario</label>
+                  <input type="text" name="user" placeholder="Ingresa nombre de usuario" minlength="10" required value><br></br>
+                  <label for="">Contraseña</label>
+                  <input type="password" name="direccion" placeholder="Ingresa contraseña" minlength="10" required value><br></br>
+                  <label for="">Correo</label>
+                  <input type="email" name="correo" placeholder="E-mail" minlength="20" required value><br></br>
+              <button class="boton-ingresar" name="button" >Ingresar</button><br><br>
+              <button class="boton-volver" type="button" name="button" onclick="history.back()">Volver</button>
+              </form>
+          </div>
+
       </header>
-    </div>
+      <footer>
+        <div class="row">
+          <div class="col-sm-6 ubicacion">
+            <h4>Ubicación</h4>
+            <p>Mitre 100</p>
+            <p>Rosario,Santa Fe</p>
+          </div>
+          <div class="col-sm-6">
+            <h4>Encontranos en nuestras redes</h4>
+            <div class="sociales">
+              <button type="button" name="button"><i class="fab fa-linkedin"></i></button>
+              <button type="button" name="button"><i class="fab fa-instagram"></i></button>
+              <button type="button" name="button"><i class="fab fa-facebook"></i></button>
+              <button type="button" name="button"><i class="fab fa-twitter"></i></button>
+            </div>
+          </div>
+        </div>
+      </footer>
+
   </body>
 </html>
