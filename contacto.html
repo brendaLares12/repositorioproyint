@@ -8,40 +8,87 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6ac70a7b0a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Literata:400,700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/estilo.css">
-    <title>Contacto</title>
+    <title>Libreria Lablic</title>
+    <link rel="icon" type="image/png" href="img/icono-pag.png" />
   </head>
   <body>
     <div class="container">
-      <header>
-        <img src="img/icono-pag.png" alt="icono">
-        <h1>Libreria Lablic</h1>
-      </header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <a class="navbar-brand" href="#">Menu</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="faq.html">F.A.Q</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.html"> Login</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Ingresa palabra clave">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-      </form>
+      <div class="encabezado-contacto">
+        <header>
+          <img src="img/icono-pag.png" alt="icono">
+          <h1>Libreria Lablic</h1>
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <a class="navbar-brand" href="#">Menu</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">F.A.Q</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html"> Login</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Ingresa palabra clave">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+      </div>
     </div>
+    <main>
+      <div class="contenedor-contacto">
+        <h2>CONTACTO</h2>
+        <div class="contenedor-form">
+          <form class="formulario" action="contacto.php" method="post" onsubmit="return validar();">
+            <label for="">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required value>
+            <label for="">Correo</label>
+            <input type="email" name="correo" id="correo" placeholder="Correo" required value>
+            <label for="">Telefono</label>
+            <input type="text" name="telefono" id="telefono" placeholder="Telefono o celular" required value>
+            <label for="">Asunto</label>
+            <input type="text" name="asunto" id="asunto" placeholder="Asunto del mensaje">
+            <label for="">Mensaje</label>
+            <textarea type="mensaje" id="mensaje" placeholder="Escriba su mensaje" required></textarea>
+            <button class="boton-enviar" type="submit" value="Enviar" name="submit">Enviar</button>
+          </form>
+          <img src="img/contacto.jpg" alt="">
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-contacto">
+        <div class="row">
+          <div class="col-sm-6 ubicacion">
+            <h4>Ubicación</h4>
+            <p>Mitre 100</p>
+            <p>Rosario,Santa Fe</p>
+          </div>
+          <div class="col-sm-6">
+            <h4>Encontranos en nuestras redes</h4>
+            <div class="sociales">
+              <button type="button" name="button"><i class="fab fa-linkedin"></i></button>
+              <button type="button" name="button"><i class="fab fa-instagram"></i></button>
+              <button type="button" name="button"><i class="fab fa-facebook"></i></button>
+              <button type="button" name="button"><i class="fab fa-twitter"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     </div>
   </body>
 </html>
