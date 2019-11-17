@@ -176,8 +176,99 @@ h4{
   margin-top: -450px;
 }
 
+/*PERFIL-USUARIO*/
+#container-perfil{
+  width:100%;
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-between;
+  margin-left: 40px;
+}
+
+
+.flex-column {
+  width:30%;
+  margin-left:30px;
+  border:1px solid gray;
+  background-color: white;
+  font-family: "Muli",sans-serif;
+}
+
+.card-info-2 {
+  width:50%;
+  position: relative;
+  right:-430px;
+  margin-top:50px;
+ }
+
+.card-text {
+  color:black;
+}
+.list-group-item a {
+  color:black;
+}
+
+.card-info-1 {
+ width:50%;
+}
+
+.card-header{
+  background-color: pink;
+}
+
+ h5 .card-header-username{
+  background-color: pink;
+ position:relative;
+ top:-15px;
+}
+
+.card-title-username{ 
+  border-bottom:1px solid darkgrey;
+  position:relative;
+  top:-15px;
+}
+
+.card-body-info{
+  border: 1px solid darkgrey;
+  padding:30px;
+  background-color: white;
+}
+
+.titulo-perfil h2{
+text-align: center;
+}
+
 /*SECCION FAQ*/
 .pregunta{
   text-align: left;
 
 }
+
+/*FOOTER*/
+footer{
+  border-top: 2px solid pink;
+  margin-top: 55px;
+  height: 100px;
+}
+h6{
+  text-align: center;
+}
+.sociales{
+  text-align: center;
+}
+.sociales button{
+  background-color: pink;
+  border-radius: 50%;
+  border-color: gold;
+
+}
+h4{
+  font-size: 15px;
+  text-align: center;
+}
+.ubicacion p{
+  font-size: 12px;
+  text-align: center;
+  margin: 2px;
+}
+
