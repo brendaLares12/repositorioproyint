@@ -33,7 +33,7 @@ h1{
 
 .nav-link{
   color:black;
-  font-family:'Literata', serif;
+  font-family:'Muli', serif;
 }
 
 .btn-outline-success{
@@ -41,13 +41,13 @@ h1{
   border-color: black;
 }
 .navbar-brand {
-  font-family:'Literata', serif;
+  font-family:'Muli', serif;
 }
 .nav-link{
-  font-family:'Literata', serif;
+  font-family:'Muli', serif;
 }
 .dropdown-menu .dropdown-item {
-  font-family:'Literata', serif;
+  font-family:'Muli', serif;
 }
 .btn-group{
   float: right;
@@ -82,7 +82,7 @@ h1{
 
 /*ESTILO DE PAGINA LOGIN*/
 .login, .registro{
-  font-family:'Literata', serif;
+  font-family:'Muli', serif;
   text-align: center;
   margin-top: 95px;
   color: black;
@@ -95,11 +95,11 @@ h1{
   border-color: gold;
 }
 input{
-  font-family:'Literata', serif;
+  font-family:'Muli', serif;
 }
 
 button{
-  font-family:'Literata', serif;
+  font-family:'Muli', serif;
   text-align: center;
   color: white;
   padding: 5px;
@@ -197,7 +197,7 @@ h4{
 .card-info-2 {
   width:50%;
   position: relative;
-  right:-430px;
+  right:-500px;
   margin-top:50px;
  }
 
@@ -222,7 +222,7 @@ h4{
  top:-15px;
 }
 
-.card-title-username{ 
+.card-title-username{
   border-bottom:1px solid darkgrey;
   position:relative;
   top:-15px;
@@ -271,4 +271,3 @@ h4{
   text-align: center;
   margin: 2px;
 }
-
