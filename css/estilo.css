@@ -276,3 +276,37 @@ h4{
   text-align: center;
   margin: 2px;
 }
+
+/*DETALLE-PRODUCTOS*/
+
+
+.detalle-libros{
+  background-color:lightpink;
+padding: 10px;
+ text-transform: uppercase;
+
+}
+.detalle-libros1{
+  text-align: center;
+  padding: 20px;
+  }
+
+.detalle-libro{
+text-align: left;
+color:pink;
+text-transform: uppercase;
+}
+.detalle-libro1{
+  background-color: black;
+  padding: 10px;
+}
+.container-cards{
+  display: flex;
+  justify-content: space-around;
+}
+.titulo-libro{
+  text-transform: uppercase;
+}
+.precio{
+  text-align: center;
+}
