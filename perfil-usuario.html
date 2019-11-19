@@ -77,7 +77,9 @@
 
 <body>
   <div class=titulo-perfil><h2>Mi Perfil</h2></div>
-  <div id="container-perfil">
+  <div class="container">
+  <div class="row justify-content-around">
+    <div class="col-4">
       <nav class="nav flex-column">
           <a class="nav-link active" href="#">Información Personal</a>
           <a class="nav-link" href="#">Libreta De Direcciones</a>
@@ -86,8 +88,9 @@
           <a class="nav-link" href="#">Formas de Pago</a>
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
         </nav>
-
-         <div class="card-info-1">
+    </div>
+    <div class="col-6">
+      <div class="card-info-1">
                        <h5 class="card-header">Información del usuario</h5>
                        <div class="card-body-info">
                          <h5 class="card-title-username">Datos del contacto</h5>
@@ -101,10 +104,7 @@
                      </div>
                    <br>
                    <br>
-                  </div>
-
-                     <div class="card-info-2">
-                           <h5 class="card-header">Libreta De Direcciones</h5>
+                   <h5 class="card-header">Libreta De Direcciones</h5>
                            <div class="card-body-info">
                              <h5 class="card-title-username">Dirección De Envío</h5>
                              <p class="card-text">No ha establecido una dirección de envío predeterminada.</p>
@@ -122,8 +122,11 @@
                             <br>
                            <a href="#" class="btn btn-primary">Editar</a>
                            </div>
-                         </div>
+                  </div>
 
+    </div>
+  </div>
+</div>
 <!--PERFIL-USUARIO-END-->
 <footer>
       <div class="row">
