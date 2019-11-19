@@ -277,27 +277,31 @@ h4{
   margin: 2px;
 }
 
-/*DETALLE-PRODUCTOS*/
+/*CARRITO*/
+.clic {
+  color:black;
+}
 
+/*LISTADO-LIBROS*/
 
 .detalle-libros{
-  background-color:lightpink;
-padding: 10px;
- text-transform: uppercase;
-
+  background-color:black;
+  padding: 10px;
+  text-transform: uppercase;
 }
 .detalle-libros1{
+  color:pink;
   text-align: center;
   padding: 20px;
   }
 
 .detalle-libro{
 text-align: left;
-color:pink;
+color:black;
 text-transform: uppercase;
 }
 .detalle-libro1{
-  background-color: black;
+  background-color: pink;
   padding: 10px;
 }
 .container-cards{
@@ -309,4 +313,22 @@ text-transform: uppercase;
 }
 .precio{
   text-align: center;
+}
+
+/*LISTADO-PAPELERIA*/
+/**ÚTILES ESCOLARES**/
+.container-cards-1{
+  display: flex;
+  justify-content: space-around;
+}
+
+.titulo-mochila{
+  text-transform: uppercase;
+}
+.titulo-cuadernos{
+  text-transform: uppercase;
+}
+
+.titulo-lapices {
+  text-transform: uppercase;
 }
