@@ -122,12 +122,19 @@ h6{
   text-align: center;
   margin: 2px;
 }
-
-.contenedor-contacto,.contenedor-login{
+/*estilo de formularios*/
+.contenedor-form{
+  margin: 15px;
+  max-width: 500px;
+  background: white;
+  padding: 30px;
+  border: 1px solid gold;
+  width: -webkit-fill-available;
+}
+.contenedor-contacto,.contenedor-login,.contenedor-registrar{
   display: flex;
   justify-content: center;
   align-items: center;
-  /*background-image: url(../img/contacto.jpg);*/
 }
 .formulario label{
   text-align: left;
@@ -137,9 +144,9 @@ h6{
     display: block;
     padding: 10px;
     margin-bottom: 10px;
-    width: 540px;
+    width: 100%;
   }
-.boton-enviar,.boton-ingresar, .boton-volver{
+.boton-enviar,.boton-ingresar, .boton-volver,.boton-registrar{
   background-color: pink;
   border-color: gold;
   width: 100%;
