@@ -313,3 +313,11 @@ h4{
 .clic {
   color:black;
 }
+@media all (min-width:768px) {
+  .container{
+    max-width: 720px;
+  }
+  .carousel{
+    display: block;
+  }
+}
