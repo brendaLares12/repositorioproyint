@@ -109,10 +109,6 @@ h5{
   text-align: center;
 }
 
-
-
-
-
 /*SECCIÓN PAPELERÍA*/
 h6{
   text-align: center;
@@ -174,6 +170,7 @@ h6{
 .pregunta{
   text-align: left;
 }
+
 
 /*FOOTER*/
 footer{
@@ -257,4 +254,54 @@ text-transform: uppercase;
 
 .titulo-lapices {
   text-transform: uppercase;
+}
+
+/*DETALLE-PRODUCTO*/
+.container-detalle{
+  display:flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+
+ul li{
+  list-style: none;
+}
+.boton-comprar{
+  background-color: pink;
+  border-color: gold;
+}
+
+/*FOOTER*/
+footer{
+  border-top: 2px solid pink;
+  margin-top: 55px;
+  height: 100px;
+}
+h6{
+  text-align: center;
+}
+.sociales{
+  text-align: center;
+}
+.sociales button{
+  background-color: pink;
+  border-radius: 50%;
+  border-color: gold;
+
+}
+h4{
+  font-size: 15px;
+  text-align: center;
+}
+.ubicacion p{
+  font-size: 12px;
+  text-align: center;
+  margin: 2px;
+}
+
+/*CARRITO*/
+.clic {
+  color:black;
 }
