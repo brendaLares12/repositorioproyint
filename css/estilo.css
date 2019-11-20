@@ -90,10 +90,6 @@ h1{
   padding: 5px;
   font-size: 18px;
 }
-.boton-ingresar, .boton-volver{
-  background-color: pink;
-  border-color: gold;
-}
 input{
   font-family:'Muli', serif;
 }
@@ -118,67 +114,39 @@ h5{
 
 
 /*SECCIÓN PAPELERÍA*/
-footer{
-  border-top: 2px solid pink;
-  margin-top: 55px;
-  height: 100px;
-}
 h6{
   text-align: center;
 }
 .sociales{
   text-align: center;
 }
-.sociales button{
-  background-color: pink;
-  border-radius: 50%;
-  border-color: gold;
 
-}
-h4{
-  font-size: 15px;
-  text-align: center;
-}
 .ubicacion p{
   font-size: 12px;
   text-align: center;
   margin: 2px;
 }
-.encabezado-contacto, .contenedor-contacto, form{
-  display: block;
-}
-.contenedor-contacto form{
-  width: 50%;
 
+.contenedor-contacto,.contenedor-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-image: url(../img/contacto.jpg);*/
 }
-
 .formulario label{
   text-align: left;
 }
-.formulario input{
-  width: 100%;
-  display: block;
-  padding: 10px;
-  margin-bottom: 10px;
-  font-size: 1em;
-}
+
 .formulario input, .formulario textarea {
-    width: 100%;
     display: block;
     padding: 10px;
     margin-bottom: 10px;
-    font-size: 1em;
+    width: 540px;
   }
-.boton-enviar{
+.boton-enviar,.boton-ingresar, .boton-volver{
   background-color: pink;
   border-color: gold;
   width: 100%;
-}
-.contenedor-form img{
-  float: right;
-  width: 520px;
-  height: 400px;
-  margin-top: -450px;
 }
 
 /*PERFIL-USUARIO*/
@@ -205,13 +173,12 @@ h4{
 /*SECCION FAQ*/
 .pregunta{
   text-align: left;
-
 }
 
 /*FOOTER*/
 footer{
   border-top: 2px solid pink;
-  margin-top: 55px;
+  margin-top: 15px;
   height: 100px;
 }
 h6{
