@@ -5,8 +5,8 @@
   $arrayDeErrores="";
 
   if($_POST){
-    $arrayDeErrores = validarForm($_POST);
-    if(count($arrayDeErrores) == 0)
+    $arrayDeErrores = validarRegistracion($_POST);
+    if(count($arrayDeErrores) === 0){
       //registro al usuario
       $usuarioFinal=[
         'nombre'=>trim($_POST['nombre']),
@@ -16,9 +16,11 @@
       ];
       //enviar datos del usuario a la BD
       $jsonDeUsuario=json_encode($usuarioFinal);
-      file_put_contents('usuarios.json',$jsonDeUsuario , FILE_APPEND);
+      file_put_contents('usuarios.json',$jsonDeUsuario . PHP_EOL ,FILE_APPEND);
       header('Location: login.php');
       exit;
+    }
+      
   }
 
 ?>
@@ -49,30 +51,40 @@
         <div class="contenedor-form">
           <h2>Registro de Usuario</h2>
       <form class="formulario" method="post" >
-        <label for="nombre">Nombre:</label>
-        <input name="nombre" type="text" id="nombre" class="form-control" placeholder="Nombre">
-        <small class="text-danger"><?= isset($arrayDeErrores['nombre']) ? $arrayDeErrores['nombre'] : "" ?></small>
+        <div>
+          <label for="nombre">Nombre:</label>
+          <input name="nombre" type="text" id="nombre" class="form-control" placeholder="Nombre">
+        <!-------------------------------------- (CONDICION)            ?            A              : B -->
+          <small class="text-danger"><?= isset($arrayDeErrores['nombre']) ? $arrayDeErrores['nombre'] : "" ?></small></div>
         <!--=============================================================================================-->
-        <label for="apellido">Apellidos:</label>
-        <input name="apellido" type="text" id="apellido" class="form-control" placeholder="Apellidos">
-        <small class="text-danger"><?= isset($arrayDeErrores['apellido']) ? $arrayDeErrores['apellido'] : "" ?></small>
+        <div>
+          <label for="apellido">Apellidos:</label>
+          <input name="apellido" type="text" id="apellido" class="form-control" placeholder="Apellidos">
+          <small class="text-danger"><?= isset($arrayDeErrores['apellido']) ? $arrayDeErrores['apellido'] : "" ?></small>
+        </div>
 
         <!--=============================================================================================-->
-        <label for="email">Correo:</label>
-        <input name="email" type="text" id="email" class="form-control" placeholder="ejemplo@correo.com">
-        <small class="text-danger"><?= isset($arrayDeErrores['email']) ? $arrayDeErrores['email'] : "" ?></small>
+        <div>
+          <label for="email">Correo:</label>
+          <input name="email" type="text" id="email" class="form-control" placeholder="ejemplo@correo.com">
+          <small class="text-danger"><?= isset($arrayDeErrores['email']) ? $arrayDeErrores['email'] : "" ?></small>
+        </div>
         <!--=============================================================================================-->
 
-        <label for="pass">Contraseña:</label>
-        <input name="pass" type="password" id="pass" class="form-control" placeholder="Contraseña">
-        <small class="text-danger"><?= isset($arrayDeErrores['pass']) ? $arrayDeErrores['pass'] : "" ?></small>
+        <div>
+          <label for="pass">Contraseña:</label>
+          <input name="pass" type="password" id="pass" class="form-control" placeholder="Contraseña">
+          <small class="text-danger"><?= isset($arrayDeErrores['pass']) ? $arrayDeErrores['pass'] : "" ?></small>
+        </div>
         <!--=============================================================================================-->
 
-        <label for="repass">Repetir Contraseña:</label>
-        <input name="repass" type="password" id="repass" class="form-control" placeholder="Repetir contraseña">
-        <small class="text-danger"><?= isset($arrayDeErrores['repass']) ? $arrayDeErrores['repass'] : "" ?></small>
+        <div>
+          <label for="repass">Repetir Contraseña:</label>
+          <input name="repass" type="password" id="repass" class="form-control" placeholder="Repetir contraseña">
+          <small class="text-danger"><?= isset($arrayDeErrores['repass']) ? $arrayDeErrores['repass'] : "" ?></small>
+        </div>
 
-        <button class="boton-registrar" type="submit" name="submit" class="button">Registrar</button>
+        <button class="boton-registrar" type="submit">Registrar</button>
         <br>
         <br>
         <button class="boton-volver" type="button" name="button" onclick="history.back()">Volver</button>
