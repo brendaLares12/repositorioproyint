@@ -1,13 +1,19 @@
 <?php
 
-function validarForm($array){
+function pre($algo) {
+  echo '<pre>';
+  var_dump($algo);
+  echo '</pre>';
+}
+
+function validarRegistracion($array){
   $errores=[];
   //validacion de nombre
   if (isset($array["nombre"])) {
     if (empty($array["nombre"])) {
       $errores["nombre"]="El campo no debe estar vacio";
     }
-    elseif (strlen($array["nombre"])<2) {
+    elseif (strlen($array["nombre"]) < 2) {
       $errores["nombre"]="El nombre debe tener mas de dos caracteres";
     }
   }
@@ -16,7 +22,7 @@ function validarForm($array){
     if (empty($array["apellido"])) {
       $errores["apellido"]="El campo no debe estar vacio";
     }
-    elseif (strlen($array["apellido"])<2) {
+    elseif (strlen($array["apellido"]) < 2) {
       $errores["apellido"]="El apellido debe tener mas de dos caracteres";
     }
   }
