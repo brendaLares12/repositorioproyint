@@ -7,8 +7,14 @@
   if($_POST){
     $arrayDeErrores = validarRegistracion($_POST);
     if(count($arrayDeErrores) === 0){
+      if(count($usuarios)){
+        $id = end($usuarios)['id'] + 1;
+    } else {
+        $id = 1;
+    }
       //registro al usuario
       $usuarioFinal=[
+        'id'=> $id,
         'nombre'=>trim($_POST['nombre']),
         'apellido'=>trim($_POST['apellido']),
         'email'=>$_POST['email'],
@@ -20,7 +26,21 @@
       header('Location: login.php');
       exit;
     }
-      
+    
+  }
+  function guardarFotoPerfil(){
+    if ($_FILES["archivo"]["error"] === UPLOAD_ERR_OK) {
+      $nombre=$_FILES["archivo"]["name"];
+      $archivo=$_FILES["archivo"]["tmp_name"];
+      $ext=pathinfo($nombre,PATHINFO_EXTENSION);
+
+      $miFoto=dir(__DIR__);
+      $miFoto=$miFoto . "/imagenPerfil/";
+      $miFoto=$miFoto . uniqid() .$ext;
+
+      move_uploaded_file();
+  
+    }
   }
 
 ?>
@@ -50,7 +70,7 @@
       <div class="contenedor-registrar">
         <div class="contenedor-form">
           <h2>Registro de Usuario</h2>
-      <form class="formulario" method="post" >
+      <form class="formulario" method="post" enctype="multipart/form-data" >
         <div>
           <label for="nombre">Nombre:</label>
           <input name="nombre" type="text" id="nombre" class="form-control" placeholder="Nombre">
@@ -82,6 +102,11 @@
           <label for="repass">Repetir Contraseña:</label>
           <input name="repass" type="password" id="repass" class="form-control" placeholder="Repetir contraseña">
           <small class="text-danger"><?= isset($arrayDeErrores['repass']) ? $arrayDeErrores['repass'] : "" ?></small>
+        </div>
+
+        <div>
+          <label for="archivo">Foto de perfil:</label>
+          <input name="archivo" type="file" id="archivo">
         </div>
 
         <button class="boton-registrar" type="submit">Registrar</button>
