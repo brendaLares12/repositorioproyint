@@ -15,6 +15,8 @@
         'email'=>$_POST['email'],
         'pass'=>password_hash($_POST['pass'],PASSWORD_DEFAULT),
       ];
+      guardarFotoPerfil();
+
       //enviar datos del usuario a la BD
       $jsonDeUsuario=json_encode($usuarioFinal);
       file_put_contents('usuarios.json',$jsonDeUsuario);
