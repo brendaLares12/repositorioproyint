@@ -61,11 +61,9 @@ function guardarFotoPerfil(){
     $archivo=$_FILES["archivo"]["tmp_name"];
     $ext=pathinfo($nombre,PATHINFO_EXTENSION);
 
-    $miArchivo=dirname(__FILE__);
-    $miArchivo=$miArchivo . "imagenPerfil/";
-    $miArchivo=$miArchivo . uniqid() . $ext;
-
-    move_uploaded_file($archivo,$miArchivo);
+    $miArchivo= "imagenPerfil/";
+    $miArchivo=$miArchivo . uniqid() . "." . $ext;
+    move_uploaded_file($archivo, $miArchivo);
 
   }
 }
