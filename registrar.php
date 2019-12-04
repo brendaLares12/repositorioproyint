@@ -7,41 +7,22 @@
   if($_POST){
     $arrayDeErrores = validarRegistracion($_POST);
     if(count($arrayDeErrores) === 0){
-      if(count($usuarios)){
-        $id = end($usuarios)['id'] + 1;
-    } else {
-        $id = 1;
-    }
       //registro al usuario
       $usuarioFinal=[
-        'id'=> $id,
+        'id'=> uniqid(),
         'nombre'=>trim($_POST['nombre']),
         'apellido'=>trim($_POST['apellido']),
         'email'=>$_POST['email'],
-        'pass'=>password_hash($_POST['pass'],PASSWORD_DEFAULT)
+        'pass'=>password_hash($_POST['pass'],PASSWORD_DEFAULT),
       ];
       //enviar datos del usuario a la BD
       $jsonDeUsuario=json_encode($usuarioFinal);
-      file_put_contents('usuarios.json',$jsonDeUsuario . PHP_EOL ,FILE_APPEND);
+      file_put_contents('usuarios.json',$jsonDeUsuario);
       header('Location: login.php');
       exit;
     }
-    
   }
-  function guardarFotoPerfil(){
-    if ($_FILES["archivo"]["error"] === UPLOAD_ERR_OK) {
-      $nombre=$_FILES["archivo"]["name"];
-      $archivo=$_FILES["archivo"]["tmp_name"];
-      $ext=pathinfo($nombre,PATHINFO_EXTENSION);
-
-      $miFoto=dir(__DIR__);
-      $miFoto=$miFoto . "/imagenPerfil/";
-      $miFoto=$miFoto . uniqid() .$ext;
-
-      move_uploaded_file();
   
-    }
-  }
 
 ?>
 
