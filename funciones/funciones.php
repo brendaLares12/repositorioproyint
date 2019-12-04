@@ -55,5 +55,18 @@ function validarRegistracion($array){
   return $errores;
 }
 
+function guardarFotoPerfil(){
+  if ($_FILES["archivo"]["error"] === UPLOAD_ERR_OK) {
+    $nombre=$_FILES["archivo"]["name"];
+    $archivo=$_FILES["archivo"]["tmp_name"];
+    $ext=pathinfo($nombre,PATHINFO_EXTENSION);
 
+    $miArchivo=dirname(__FILE__);
+    $miArchivo=$miArchivo . "imagenPerfil/";
+    $miArchivo=$miArchivo . uniqid() . $ext;
+
+    move_uploaded_file($archivo,$miArchivo);
+
+  }
+}
  ?>
