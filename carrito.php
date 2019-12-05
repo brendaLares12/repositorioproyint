@@ -22,7 +22,7 @@
     <div>
       <h2>El carrito de compras está vacío</h2>
       <p>Usted no tiene artículos en su carrito de compra.</p>
-      <p>Haga clic <a class="clic" href="home.html">aquí</a> para continuar comprando.</p>
+      <p>Haga clic <a class="clic" href="index.html">aquí</a> para continuar comprando.</p>
     </div>
         <br>
         <br>
