@@ -91,7 +91,7 @@
           <label for="archivo">Foto de perfil:</label>
           <input name="archivo" type="file" id="archivo">
         </div>
-
+        
         <button class="boton-registrar" type="submit">Registrar</button>
         <br>
         <br>
