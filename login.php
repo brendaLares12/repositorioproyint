@@ -1,3 +1,36 @@
+
+<?php
+  session_start();
+  require_once 'funciones/funciones.php';
+
+$erroresLogin="";
+
+if($_POST){
+  $erroresLogin = validarRegistracion($_POST);
+  if(count($erroresLogin) == 0) {
+     $usuariosGuardados = file_get_contents('usuarios.json');
+     $usuariosGuardados = explode(PHP_EOL,$usuariosGuardados);
+     array_pop($usuariosGuardados);
+     foreach($usuariosGuardados as $usuario){
+         $usuarioFinal = json_decode($usuario, true);
+         if($usuarioFinal['email'] == $_POST['email']) {
+            if (password_verify($_POST['pass'], $usuarioFinal['pass']) ){
+              $SESSION['emailUsuario'] == $usuarioFinal['email'];
+              if (isset($_POST['recordarme']) && $_POST['recordarme'] =='on'){
+                 setcookie('emailUsuario', $usuarioFinal['email'], time() + 60 * 60 * 24 * 7);
+                 setcookie('passUsuario', $usuarioFinal['pass'], time() + 60 * 60 * 24 * 7);
+              }
+              header('Location: index.php');
+            }
+
+         }
+     }
+  }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -23,10 +56,21 @@
           <div class="contenedor-form">
             <h2>Ingresar Usuario</h2>
             <form class="formulario" method="POST">
+
                   <label for="email">Email de Usuario</label>
                   <input type="email" name="email" placeholder="Ingresa email" class="form-control" id="email" value="">
+                  <small class="text-danger"><?= isset($erroresLogin['apellido']) ? $erroresLogin['apellido'] : "" ?></small>
+
+
                   <label for="pass">Contraseña</label>
                   <input type="password" name="pass" placeholder="Ingresa contraseña" class="form-control" id="pass" value="" >
+                  <small class="text-danger"><?= isset($erroresLogin['apellido']) ? $erroresLogin['apellido'] : "" ?></small>
+
+                <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="recordarme" name="recordarme">
+                <label class="form-check-label" for="exampleCheck1">Recordar usuario</label>
+                </div>
+
               <button class="boton-ingresar" name="button" type="submit" >Ingresar</button>
               <br>
               <br>

@@ -39,7 +39,7 @@
       <li>Traductor: José Torroba</li
         <li>Precio:$300</li>
       </ul>
-      <button class="boton-comprar" type="submit" value="comprar" name="submit">Comprar</button>
+      <button class="boton-comprar" type="submit" value="comprar" name="submit"><a href="carrito.php">Comprar</a></button>
       </div>
       </div>
     </div>

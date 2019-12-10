@@ -8,6 +8,7 @@
       <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
         <a class="dropdown-item" href="login.php">Ingresar</a>
         <a class="dropdown-item" href="registrar.php">Registrar</a>
+        <a class="dropdown-item" href="logout.php">Salir</a>
       </div>
     </div>
       <button onclick="location.href='carrito.php'" type="button" class="btn btn-transparent btn-compra"><i class="fas fa-shopping-cart"></i></button>

@@ -20,23 +20,33 @@
     <?php require_once 'HeadyFoot/header.php'  ?>
 
     <div>
-      <h2>El carrito de compras está vacío</h2>
-      <p>Usted no tiene artículos en su carrito de compra.</p>
-      <p>Haga clic <a class="clic" href="home.html">aquí</a> para continuar comprando.</p>
-    </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-            <?php require_once 'HeadyFoot/footer.php' ?>
+      <h2> El carrito de compras está vacío </h2>
+      <p> Usted no tiene artículos en su carrito de compra. </p>
+      <p>Haga clic <a class ="clic" href="listado-productos.php">aquí</a> para continuar comprando.</p>
 
-    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+            <?php require_once 'HeadyFoot/footer.php' ?>
     </body>
 </html>
