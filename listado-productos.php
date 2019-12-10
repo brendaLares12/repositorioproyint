@@ -74,7 +74,7 @@
   <div class="col-md-4">
     <div class="container-cards">
       <div class="img">
-      <a href="detalle-producto-libro.html"><img src="img/tomsawyer.jpg" alt="" height="400px"></a>
+      <a href="detalle-producto-libro.php"><img src="img/tomsawyer.jpg" alt="" height="400px"></a>
       <br>
       <br>
       <h4 class="titulo-libro"><strong>"Las Aventuras de Tom Sawyer"</strong></h4>
