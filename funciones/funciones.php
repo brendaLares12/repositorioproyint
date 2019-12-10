@@ -67,4 +67,14 @@ function guardarFotoPerfil(){
 
   }
 }
+
+function persistirDato($arrayErrores,$string){
+  if (isset($arrayErrores[$string])) {
+    return "";
+  }else {
+    if (isset($_POST[$string])) {
+      return $_POST[$string];
+    }
+  }
+}
  ?>
