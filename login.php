@@ -68,7 +68,7 @@ if($_POST){
 
                 <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="recordarme" name="recordarme">
-                <label class="form-check-label" for="exampleCheck1">Recordar usuario</label>
+                <label class="form-check-label" for="exampleCheck1">Recordarme</label>
                 </div>
 
               <button class="boton-ingresar" name="button" type="submit" >Ingresar</button>
