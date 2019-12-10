@@ -19,13 +19,19 @@
 
       //enviar datos del usuario a la BD
       $jsonDeUsuario=json_encode($usuarioFinal);
-      file_put_contents('usuarios.json',$jsonDeUsuario);
+      file_put_contents('usuarios.json',$jsonDeUsuario,FILE_APPEND);
       header('Location: login.php');
       exit;
     }
+    if ($_POST['recordar']=="recordar"){
+      setcookie("nombre",$_POST['nombre'],time()+(60*60*24*365),"/");
+      setcookie("apellido",$_POST['apellido'],time()+(60*60*24*365),"/");
+      setcookie("email",$_POST['email'],time()+(60*60*24*365),"/");
+      setcookie("contrasenia",$_POST['pass'],time()+(60*60*24*365),"/");
+    }
   }
   
-
+  
 ?>
 
 
@@ -55,34 +61,34 @@
       <form  method="post" enctype="multipart/form-data" >
         <div class="form-group">
           <label for="nombre">Nombre:</label>
-          <input name="nombre" type="text" id="nombre" class="form-control" placeholder="Nombre">
+          <input name="nombre" type="text" id="nombre" class="form-control" placeholder="Nombre" value="<?= persistirDato($arrayDeErrores,'nombre'; ?>)">
         <!-------------------------------------- (CONDICION)            ?            A              : B -->
           <small class="text-danger"><?= isset($arrayDeErrores['nombre']) ? $arrayDeErrores['nombre'] : "" ?></small></div>
         <!--=============================================================================================-->
         <div class="form-group">
           <label for="apellido">Apellidos:</label>
-          <input name="apellido" type="text" id="apellido" class="form-control" placeholder="Apellidos">
+          <input name="apellido" type="text" id="apellido" class="form-control" placeholder="Apellidos" value="<?= persistirDato($arrayDeErrores,'apellido'; ?>)">
           <small class="text-danger"><?= isset($arrayDeErrores['apellido']) ? $arrayDeErrores['apellido'] : "" ?></small>
         </div>
 
         <!--=============================================================================================-->
         <div class="form-group">
           <label for="email">Correo:</label>
-          <input name="email" type="text" id="email" class="form-control" placeholder="ejemplo@correo.com">
+          <input name="email" type="text" id="email" class="form-control" placeholder="ejemplo@correo.com" value="<?= persistirDato($arrayDeErrores,'email'; ?>)">
           <small class="text-danger"><?= isset($arrayDeErrores['email']) ? $arrayDeErrores['email'] : "" ?></small>
         </div>
         <!--=============================================================================================-->
 
         <div class="form-group">
           <label for="pass">Contraseña:</label>
-          <input name="pass" type="password" id="pass" class="form-control" placeholder="Contraseña">
+          <input name="pass" type="password" id="pass" class="form-control" placeholder="Contraseña" value="<?= persistirDato($arrayDeErrores,'pass'; ?>)">
           <small class="text-danger"><?= isset($arrayDeErrores['pass']) ? $arrayDeErrores['pass'] : "" ?></small>
         </div>
         <!--=============================================================================================-->
 
         <div class="form-group">
           <label for="repass">Repetir Contraseña:</label>
-          <input name="repass" type="password" id="repass" class="form-control" placeholder="Repetir contraseña">
+          <input name="repass" type="password" id="repass" class="form-control" placeholder="Repetir contraseña" value="<?= persistirDato($arrayDeErrores,'repass'; ?>)">
           <small class="text-danger"><?= isset($arrayDeErrores['repass']) ? $arrayDeErrores['repass'] : "" ?></small>
         </div>
 
@@ -91,8 +97,8 @@
           <input name="archivo" type="file" id="archivo">
         </div>
         <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                <input type="checkbox" class="form-check-input" id="recordar" value="recordar" name="recordar">
+                <label class="form-check-label" for="recordar">Recordarme</label>
             </div>
         <button class="boton-registrar" type="submit">Registrar</button>
         <br>
