@@ -28,6 +28,7 @@
 					for($i=0;$i<count($datos);$i++){
 			?>
 					<div class="compra">
+<<<<<<< HEAD
 
 						<img src="../img/Muestras/<?php echo $datos[$i]['imagen'];?>" width="350" height="350"><br>
 						<span><?php echo $datos[$i]['nombre']?></span><br>
@@ -82,6 +83,41 @@
 <br>
 <br>
 
+=======
+
+						<img src="../img/Muestras/<?php echo $datos[$i]['imagen'];?>" width="350" height="350"><br>
+						<span><?php echo $datos[$i]['nombre']?></span><br>
+						<span>Precio unitario: <?php echo $datos[$i]['precio']?></span><br>
+						<span>Cantidad 
+							<input type="text" value="<?php echo $datos[$i]['cantidad'];?>"
+							data-precio="<?php echo $datos[$i]['precio'];?>"
+							data-id="<?php echo $datos[$i]['id'];?>"
+							class="cantidad">
+						</span><br>
+						<span class="subtotal">Subtotal: <?php $sub = $datos[$i]['precio']*$datos[$i]['cantidad']; echo $sub ?> </span>
+
+					</div>
+				<?php
+					$total=$sub+$total;
+					}
+				}else{
+					echo '<h2>El carrito de compras está vacío</h2>';
+				}
+				echo '<h2 id="total">Total: '.$total.'</h2>';
+				if($total!=0){
+					echo'<a href="compras/compras.php">Finalizar compra</a>';
+				}
+				
+			?>
+			<br>
+			<a href="../index.php">Seguir comprando</a>
+			
+
+    </div>
+    
+
+    <?php require_once 'HeadyFoot/footer.php' ?>
+>>>>>>> 8fda76477b2eb3c30a00d9310dcd4a8a2998ac98
 
 =======
     </div>
