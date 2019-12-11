@@ -18,8 +18,8 @@
   <body>
     <div class="container">
     <?php require_once 'HeadyFoot/header.php'  ?>
-    vacio
-		
+	
+	vacio
 			
 	<?php require_once 'HeadyFoot/footer.php' ?>
 	</div>

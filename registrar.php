@@ -73,7 +73,7 @@
           <small class="text-danger"><?= isset($arrayDeErrores['apellido']) ? $arrayDeErrores['apellido'] : "" ?></small>
         </div>
 
-        <!--=============================================================================================-->
+        <!--============================================================================================-->
         <div class="form-group">
           <label for="email">Correo:</label>
           <input name="email" type="text" id="email" class="form-control" placeholder="ejemplo@correo.com" value="<?= persistirDato($arrayDeErrores,'email'); ?>">
