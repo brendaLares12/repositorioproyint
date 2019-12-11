@@ -18,10 +18,45 @@
   <body>
     <div class="container">
     <?php require_once 'HeadyFoot/header.php'  ?>
-	
-	vacio
+
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Producto</th>
+      <th scope="col">Precio Unitario</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><i class="far fa-trash-alt"></i></th>
+      <td></td>
+      <td></td>
+      <td>
+        <label for="cantidad">
+        <input type="number" name="cantidad" id="cantidad" min="0" max="9">
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row"></th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 			
-	<?php require_once 'HeadyFoot/footer.php' ?>
+	  <?php require_once 'HeadyFoot/footer.php' ?>
 	</div>
   </body>
 </html>
