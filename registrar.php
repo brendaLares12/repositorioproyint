@@ -23,12 +23,12 @@
       header('Location: login.php');
       exit;
     }
-    if ($_POST['recordar']=="recordar"){
+    /*if ($_POST['recordar']=="recordar"){
       setcookie("nombre",$_POST['nombre'],time()+(60*60*24*365),"/");
       setcookie("apellido",$_POST['apellido'],time()+(60*60*24*365),"/");
       setcookie("email",$_POST['email'],time()+(60*60*24*365),"/");
       setcookie("contrasenia",$_POST['pass'],time()+(60*60*24*365),"/");
-    }
+    }*/
   }
   
   
@@ -54,41 +54,43 @@
   </head>
   <body>
     <div class="container">
-      <?php require_once 'HeadyFoot/header.php'  ?>
+      <?php require_once 'HeadyFoot/header.php'?>
     <div class="contenedor-registrar">
     <main class="contenedor-form">
+
       <h2>Registro de Usuario</h2>
+      
       <form  method="post" enctype="multipart/form-data" >
         <div class="form-group">
           <label for="nombre">Nombre:</label>
-          <input name="nombre" type="text" id="nombre" class="form-control" placeholder="Nombre" value="<?= persistirDato($arrayDeErrores,'nombre'; ?>)">
+          <input name="nombre" type="text" id="nombre" class="form-control" placeholder="Nombre" value="<?= persistirDato($arrayDeErrores,'nombre'); ?>">
         <!-------------------------------------- (CONDICION)            ?            A              : B -->
           <small class="text-danger"><?= isset($arrayDeErrores['nombre']) ? $arrayDeErrores['nombre'] : "" ?></small></div>
         <!--=============================================================================================-->
         <div class="form-group">
           <label for="apellido">Apellidos:</label>
-          <input name="apellido" type="text" id="apellido" class="form-control" placeholder="Apellidos" value="<?= persistirDato($arrayDeErrores,'apellido'; ?>)">
+          <input name="apellido" type="text" id="apellido" class="form-control" placeholder="Apellidos" value="<?= persistirDato($arrayDeErrores,'apellido'); ?>">
           <small class="text-danger"><?= isset($arrayDeErrores['apellido']) ? $arrayDeErrores['apellido'] : "" ?></small>
         </div>
 
         <!--=============================================================================================-->
         <div class="form-group">
           <label for="email">Correo:</label>
-          <input name="email" type="text" id="email" class="form-control" placeholder="ejemplo@correo.com" value="<?= persistirDato($arrayDeErrores,'email'; ?>)">
+          <input name="email" type="text" id="email" class="form-control" placeholder="ejemplo@correo.com" value="<?= persistirDato($arrayDeErrores,'email'); ?>">
           <small class="text-danger"><?= isset($arrayDeErrores['email']) ? $arrayDeErrores['email'] : "" ?></small>
         </div>
         <!--=============================================================================================-->
 
         <div class="form-group">
           <label for="pass">Contraseña:</label>
-          <input name="pass" type="password" id="pass" class="form-control" placeholder="Contraseña" value="<?= persistirDato($arrayDeErrores,'pass'; ?>)">
+          <input name="pass" type="password" id="pass" class="form-control" placeholder="Contraseña" value="<?= persistirDato($arrayDeErrores,'pass'); ?>">
           <small class="text-danger"><?= isset($arrayDeErrores['pass']) ? $arrayDeErrores['pass'] : "" ?></small>
         </div>
         <!--=============================================================================================-->
 
         <div class="form-group">
           <label for="repass">Repetir Contraseña:</label>
-          <input name="repass" type="password" id="repass" class="form-control" placeholder="Repetir contraseña" value="<?= persistirDato($arrayDeErrores,'repass'; ?>)">
+          <input name="repass" type="password" id="repass" class="form-control" placeholder="Repetir contraseña" value="<?= persistirDato($arrayDeErrores,'repass'); ?>">
           <small class="text-danger"><?= isset($arrayDeErrores['repass']) ? $arrayDeErrores['repass'] : "" ?></small>
         </div>
 
