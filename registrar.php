@@ -13,7 +13,7 @@
         'nombre'=>trim($_POST['nombre']),
         'apellido'=>trim($_POST['apellido']),
         'email'=>$_POST['email'],
-        'pass'=>password_hash($_POST['pass'],PASSWORD_DEFAULT),
+        'pass'=>password_hash($_POST['pass'],PASSWORD_DEFAULT)
       ];
       guardarFotoPerfil();
 

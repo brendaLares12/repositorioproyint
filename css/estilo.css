@@ -153,6 +153,7 @@ h6{
   border-radius: 20px;
 }
 
+
 /*PERFIL-USUARIO*/
 .flex-column {
   border:1px solid gray;
@@ -209,8 +210,11 @@ h4{
 }
 
 /*CARRITO*/
-.clic {
-  color:black;
+.container{
+justify-content:
+}
+.boton{
+
 }
 
 /*LISTADO-LIBROS*/

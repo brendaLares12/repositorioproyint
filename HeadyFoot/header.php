@@ -6,8 +6,13 @@
         <i class="fas fa-user"></i>
       </button>
       <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        <?php if(!isset($_SESSION['email'])): ?>
         <a class="dropdown-item" href="login.php">Ingresar</a>
         <a class="dropdown-item" href="registrar.php">Registrar</a>
+        <?php endif; ?>
+        <?php if(isset($_SESSION['email'])): ?>
+        <a class="dropdown-item btn-danger" href="logout.php">Salir</a>
+        <?php endif; ?>
       </div>
     </div>
       <button onclick="location.href='carrito.php'" type="button" class="btn btn-transparent btn-compra"><i class="fas fa-shopping-cart"></i></button>
