@@ -3,11 +3,11 @@
   session_start();
   require_once 'funciones/funciones.php';
 
-$erroresLogin="";
+$arrayDeErrores = "";
 
 if($_POST){
-  $erroresLogin = validarRegistracion($_POST);
-  if(count($erroresLogin) === 0) {
+  $arrayDeErrores = validarRegistracion($_POST);
+  if(count($arrayDeErrores) === 0) {
      $usuariosGuardados = file_get_contents('usuarios.json');
      $usuariosGuardados = explode(PHP_EOL,$usuariosGuardados);
      array_pop($usuariosGuardados);
@@ -61,20 +61,22 @@ if($_POST){
               
             <div class="form-group">
               <label for="email">Email de Usuario</label>
-              <input type="email" name="email" placeholder="Ingresa email" class="form-control" id="email" value="<?= persistirDato($erroresLogin, 'email') ?>">
-              <small class="text-danger"><?= isset($erroresLogin['apellido']) ? $erroresLogin['apellido'] : "" ?></small>
+              <input type="email" name="email" placeholder="Ingresa email" class="form-control" id="email" value="<?= persistirDato($arrayDeErrores, 'email') ?>">
+              <small class="text-danger"><?= isset($arrayDeErrores['email']) ? $arrayDeErrores['email'] : "" ?></small>
             </div>
 
             <div class="form-group">
               <label for="pass">Contraseña</label>
               <input type="password" name="pass" placeholder="Ingresa contraseña" class="form-control" id="pass" value="" >
-              <small class="text-danger"><?= isset($erroresLogin['apellido']) ? $erroresLogin['apellido'] : "" ?></small>
+              <small class="text-danger"><?= isset($arrayDeErrores['pass']) ? $arrayDeErrores['pass'] : "" ?></small>
             </div>
 
             <div class="form-group form-check">
               <input type="checkbox" class="form-check-input" id="recordarme" name="recordarme">
               <label class="form-check-label" for="exampleCheck1">Recordarme</label>
             </div>
+            <form class="formulario" method="POST">
+
 
               <button class="boton-ingresar" name="button" type="submit" >Ingresar</button>
               <br>
