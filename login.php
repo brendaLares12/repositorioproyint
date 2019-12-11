@@ -7,7 +7,7 @@ $erroresLogin="";
 
 if($_POST){
   $erroresLogin = validarRegistracion($_POST);
-  if(count($erroresLogin) == 0) {
+  if(count($erroresLogin) === 0) {
      $usuariosGuardados = file_get_contents('usuarios.json');
      $usuariosGuardados = explode(PHP_EOL,$usuariosGuardados);
      array_pop($usuariosGuardados);
@@ -15,12 +15,13 @@ if($_POST){
          $usuarioFinal = json_decode($usuario, true);
          if($usuarioFinal['email'] == $_POST['email']) {
             if (password_verify($_POST['pass'], $usuarioFinal['pass']) ){
-              $SESSION['emailUsuario'] == $usuarioFinal['email'];
+              $SESSION['emailUsuario'] = $usuarioFinal['email'];
               if (isset($_POST['recordarme']) && $_POST['recordarme'] =='on'){
                  setcookie('emailUsuario', $usuarioFinal['email'], time() + 60 * 60 * 24 * 7);
                  setcookie('passUsuario', $usuarioFinal['pass'], time() + 60 * 60 * 24 * 7);
               }
               header('Location: index.php');
+              exit;
             }
 
          }
@@ -50,32 +51,37 @@ if($_POST){
   </head>
   <body>
     <div class="container">
-    <?php require_once 'HeadyFoot/header.php'  ?>
+    <?php require_once 'HeadyFoot/header.php'?>
+
 
           <div class="contenedor-login">
-          <div class="contenedor-form">
+          <main class="contenedor-form">
             <h2>Ingresar Usuario</h2>
-            <form class="formulario" method="POST">
+            <form method="post">
+              
+            <div class="form-group">
+              <label for="email">Email de Usuario</label>
+              <input type="email" name="email" placeholder="Ingresa email" class="form-control" id="email" value="<?= persistirDato($erroresLogin, 'email') ?>">
+              <small class="text-danger"><?= isset($erroresLogin['apellido']) ? $erroresLogin['apellido'] : "" ?></small>
+            </div>
 
-                  <label for="email">Email de Usuario</label>
-                  <input type="email" name="email" placeholder="Ingresa email" class="form-control" id="email" value="">
-                  <small class="text-danger"><?= isset($erroresLogin['apellido']) ? $erroresLogin['apellido'] : "" ?></small>
+            <div class="form-group">
+              <label for="pass">Contraseña</label>
+              <input type="password" name="pass" placeholder="Ingresa contraseña" class="form-control" id="pass" value="" >
+              <small class="text-danger"><?= isset($erroresLogin['apellido']) ? $erroresLogin['apellido'] : "" ?></small>
+            </div>
 
-
-                  <label for="pass">Contraseña</label>
-                  <input type="password" name="pass" placeholder="Ingresa contraseña" class="form-control" id="pass" value="" >
-                  <small class="text-danger"><?= isset($erroresLogin['apellido']) ? $erroresLogin['apellido'] : "" ?></small>
-
-                <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="recordarme" name="recordarme">
-                <label class="form-check-label" for="exampleCheck1">Recordarme</label>
-                </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="recordarme" name="recordarme">
+              <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+            </div>
 
               <button class="boton-ingresar" name="button" type="submit" >Ingresar</button>
               <br>
               <br>
               <button class="boton-volver" type="button" name="button" onclick="history.back()">Volver</button>
               </form>
+          </main> 
           </div>
         </div>
         <?php require_once 'HeadyFoot/footer.php' ?>
