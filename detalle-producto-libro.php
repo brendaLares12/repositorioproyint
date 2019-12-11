@@ -36,7 +36,7 @@
       <li>Número de páginas: 320</li>
       <li>Idioma:Castellano</li>
       <li>Editorial: Austral</li>
-      <li>Traductor: José Torroba</li
+      <li>Traductor: José Torroba</li>
         <li>Precio:$300</li>
       </ul>
       <button class="boton-comprar" type="submit" value="comprar" name="submit"><a href="carrito.php">Comprar</a></button>
