@@ -8,20 +8,23 @@ $arrayDeErrores = "";
 if($_POST){
   $arrayDeErrores = validarRegistracion($_POST);
   if(count($arrayDeErrores) === 0) {
-     $usuariosGuardados = file_get_contents('usuarios.json');
-     $usuariosGuardados = explode(PHP_EOL,$usuariosGuardados);
+    $usuariosGuardados = file_get_contents('usuarios.json');
+    $usuariosGuardados = explode(PHP_EOL,$usuariosGuardados);
      array_pop($usuariosGuardados);
      foreach($usuariosGuardados as $usuario){
          $usuarioFinal = json_decode($usuario, true);
          if($usuarioFinal['email'] == $_POST['email']) {
             if (password_verify($_POST['pass'], $usuarioFinal['pass']) ){
-              $SESSION['emailUsuario'] = $usuarioFinal['email'];
-              if (isset($_POST['recordarme']) && $_POST['recordarme'] =='on'){
-                 setcookie('emailUsuario', $usuarioFinal['email'], time() + 60 * 60 * 24 * 7);
-                 setcookie('passUsuario', $usuarioFinal['pass'], time() + 60 * 60 * 24 * 7);
+             /* $_SESSION['emailUsuario'] = $usuarioFinal['email'];*/
+              $_SESSION['usuario'] = $usuarioFinal;
+              if (isset($_POST['recordarme']) == true){
+                 /*setcookie('emailUsuario', $usuarioFinal['email'], time() + 60 * 60 * 24 * 7);
+                 setcookie('passUsuario', $usuarioFinal['pass'], time() + 60 * 60 * 24 * 7);*/
+                setcookie('usuario',json_encode($usuarioFinal),time()+604800);
               }
-              header('Location: index.php');
-              exit;
+              header('Location: perfil-usuario.php');
+            }else{
+              $errores['password'] = 'La clave no es correcta';
             }
 
          }
@@ -72,7 +75,7 @@ if($_POST){
             </div>
 
             <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="recordarme" name="recordarme">
+              <input type="checkbox" id="recordarme" name="recordarme" value="true">
               <label class="form-check-label" for="exampleCheck1">Recordarme</label>
             </div>
             <form class="formulario" method="POST">
