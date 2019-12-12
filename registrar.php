@@ -19,7 +19,7 @@
 
       //enviar datos del usuario a la BD
       $jsonDeUsuario=json_encode($usuarioFinal);
-      file_put_contents('usuarios.json',$jsonDeUsuario,FILE_APPEND);
+      file_put_contents('usuarios.json',$jsonDeUsuario . PHP_EOL  ,FILE_APPEND);
       header('Location: login.php');
       exit;
     }
