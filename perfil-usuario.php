@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 
 ?>
@@ -72,6 +72,7 @@ session_start();
       </div>
     </div>
     </div>
+    
 <!--PERFIL-USUARIO-END-->
 <?php require_once 'HeadyFoot/footer.php' ?>
 

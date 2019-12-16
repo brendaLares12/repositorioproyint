@@ -97,7 +97,7 @@ input{
 button{
   font-family:'Muli', serif;
   text-align: center;
-  color: white;
+  color: black;
   padding: 5px;
   font-size: 18px;
 }
@@ -108,7 +108,6 @@ h2{
 h5{
   text-align: center;
 }
-
 /*SECCIÓN PAPELERÍA*/
 h6{
   text-align: center;
@@ -153,6 +152,63 @@ h6{
   border-radius: 20px;
 }
 
+/*RECUPERAR-CONTRASEÑA*/
+
+.container-form {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.contenedor-email {
+  background-color: white;
+  margin-top:20px;
+  padding:20px;
+}
+
+.container-email {
+max-width:100%;
+display: flex;
+justify-content: center;
+}
+
+input {
+  border-radius: .25rem;
+  }
+
+  .campo-email{
+      width: 140%;
+  }
+
+.button-enviar{
+  align-items: flex-end;
+}
+
+.enviar {
+  text-align: center;
+ background-color:pink;
+ border-color:gold;
+ color:black;
+ width:35%;
+ border-radius: 20px;
+ align-items: flex-end;
+}
+
+a {
+  color:black;
+}
+
+a:hover {
+  color:hotpink;
+}
+
+.container-link{
+position: relative;
+float:right;
+line-height: 40px;
+}
+
 
 /*PERFIL-USUARIO*/
 .flex-column {
@@ -179,6 +235,15 @@ h6{
 .pregunta{
   text-align: left;
 }
+.contenedor-FAQ {
+margin-top: 15px;
+background-color: white;
+}
+.preguntas{
+  background-color: white;
+  padding-left: 25px;
+  padding-right: 25px;
+}
 
 
 /*FOOTER*/
@@ -187,6 +252,12 @@ footer{
   margin-top: 15px;
   height: 100px;
 }
+
+.footer{
+  background-color: rgba(255, 99, 71, 0.5);
+}
+
+
 h6{
   text-align: center;
 }
@@ -210,14 +281,27 @@ h4{
 }
 
 /*CARRITO*/
-.container{
-justify-content:
+.table {
+  background-color: white;
 }
-.boton{
-
+.precio strong{
+  position: relative;
+  right: 10px;
 }
 
+
+/*LISTADO-PRODUCTOS*/
+.btn .btn-link {
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
 /*LISTADO-LIBROS*/
+
+.detalle-productos{
+  background-color: white;
+}
 
 .detalle-libros{
   background-color:black;
@@ -243,6 +327,14 @@ text-transform: uppercase;
   display: flex;
   justify-content: space-around;
 }
+.boton-comprar{
+  background-color: pink;
+  border-color: gold;
+  width: 30%;
+  border-radius: 20px;
+}
+
+
 .titulo-libro{
   text-transform: uppercase;
 }
@@ -275,7 +367,9 @@ text-transform: uppercase;
   justify-content: space-between;
   padding-left: 20px;
 }
-
+.boton-comprar {
+  text-align: center;
+}
 
 ul li{
   list-style: none;

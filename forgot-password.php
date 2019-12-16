@@ -1,7 +1,11 @@
 <?php
 session_start();
+require_once 'funciones/funciones.php';
 
-?>
+$errores = "";
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -20,29 +24,41 @@ session_start();
     <link rel="icon" type="image/png" href="img/icono-pag.png" />
   </head>
   <body>
-    <div class="container">
-    <?php require_once 'HeadyFoot/header.php'  ?>
+<div class="container">
+  <?php require_once 'HeadyFoot/header.php'?>
 
-      <div class="contenedor-contacto">
-          <div class="contenedor-form">
-            <h2>Contacto</h2>
-          <form class="formulario" action="contacto.php" method="post" onsubmit="return validar();">
-            <label for=""><strong>Nombre</strong></label>
-            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required value>
-            <label for=""><strong>Correo</strong></label>
-            <input type="email" name="correo" id="correo" placeholder="Correo" required value>
-            <label for=""><strong>Telefono</strong></label>
-            <input type="text" name="telefono" id="telefono" placeholder="Telefono o celular" required value>
-            <label for=""><strong>Asunto</strong></label>
-            <input type="text" name="asunto" id="asunto" placeholder="Asunto del mensaje">
-            <label for=""><strong>Mensaje</strong></label>
-            <textarea type="mensaje" id="mensaje" placeholder="Escriba su mensaje" required></textarea>
-            <button class="boton-enviar" type="submit" value="Enviar" name="submit">Enviar</button>
-          </form>
-        </div>
-      </div>
-      <?php require_once 'HeadyFoot/footer.php' ?>
-
-    </div>
-  </body>
+<div class="container-form">
+<div class="contenedor-email">
+  <h3 align= "center">Cambiá tu contraseña</h3>
+<p align= "center">Te enviaremos un email para que puedas cambiar tu contraseña.</p>
+<br>
+<div class="container-email">
+  <form method="post" enctype="multipart/form-data">
+    <label for="email"><strong>Email:</strong></label>
+    <br>
+    <div>
+    <input type= "email" id="email" class="campo-email" name="email" placeholder="Ingresa tu email">
+  </div>
+    <br>
+    <div class= "container-link">
+    <a href="login.php" class="volver-login">Volver a Login</a>
+  </div>
+    <div class="button-enviar">
+    <button class="enviar" name="button" type="submit">Enviar</button>
+    <br>
+    <br>
+  </div>
+    </form>
+  </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<?php require_once 'HeadyFoot/footer.php'?>
+</body>
 </html>

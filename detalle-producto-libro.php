@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 
 ?>
@@ -23,6 +23,8 @@ session_start();
   <div class="container">
   <?php require_once 'HeadyFoot/header.php'  ?>
   <!--detalle de producto-->
+  <br>
+  <div class="detalle-productos">
   <div>
     <br>
     <div class="container-detalle">
@@ -34,26 +36,72 @@ session_start();
         </div>
       </div>
       <div class="col-md-6">
-    <div><p><strong>"Las Aventuras de Tom Sayer"</strong><p/></div>
+    <div><p><strong>"Las Aventuras de Tom Sawyer"</strong><p/></div>
       <ul>
       <li>Autor: Mark Twain</li>
       <li>Número de páginas: 320</li>
-      <li>Idioma:Castellano</li>
+      <li>Idioma: Castellano</li>
       <li>Editorial: Austral</li>
       <li>Traductor: José Torroba</li>
-        <li>Precio:$300</li>
+        <li>Precio: $300</li>
       </ul>
       <button class="boton-comprar" type="submit" value="comprar" name="submit"><a href="carrito.php">Comprar</a></button>
       </div>
       </div>
     </div>
+
+    <div>
+      <br>
+      <div class="container-detalle">
+      <div class="col-md-4">
+          <div>
+          <a href=#><img src="img/faber-castell.jpg" alt="" height="300px"></a>
+          <br>
+          <br>
+          </div>
+        </div>
+        <div class="col-md-6">
+      <div><p><strong>Lápices "Faber Castell" Grip Triangulares X 24</strong><p/></div>
+        <ul>
+        <li>Lápices de colores largos de forma triangular ergonómicos, trazo suave, colores brillantes, lavable y no tóxicos.</li>
+        <li>Unidades por paquete: 24</li>
+        <li>Precio: $700</li>
+        </ul>
+        <button class="boton-comprar" type="submit" value="comprar" name="submit"><a href="carrito.php">Comprar</a></button>
+        </div>
+        </div>
+      </div>
+
+      <div>
+        <br>
+        <div class="container-detalle">
+        <div class="col-md-4">
+            <div>
+            <a href=#><img src="img/mochilas.jpg" alt="" height="400px"></a>
+            <br>
+            <br>
+            </div>
+          </div>
+          <div class="col-md-6">
+        <div><p><strong>Mochilas para niños y niñas</strong><p/></div>
+          <ul>
+            <li>Mochila escolar con cinco cierres</li>
+            <li>Composición: Nylon</li>
+            <li>Colores: Varios</li>
+            <li>Precio: $2300</li>
+          </ul>
+          <button class="boton-comprar" type="submit" value="comprar" name="submit"><a href="carrito.php">Comprar</a></button>
+          </div>
+          </div>
+        </div>
 <br>
 <br>
 <br>
 <br>
+</div>
   <!--seccion footer-->
   <?php require_once 'HeadyFoot/footer.php' ?>
 
-    </div>
+
     </body>
   </html>
