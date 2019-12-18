@@ -44,8 +44,8 @@ session_start();
         <h5 class="card-header">Información del usuario</h5>
         <div class="card-body-info">
           <h5 class="card-title-username">Datos del contacto</h5>
-          <p class="card-text">Nombre de usuario</p>
-          <p class="card-text">Email</p>
+          <p class="card-text">Nombre de usuario: <?=$_SESSION['usuario']['nombre']?></p>
+          <p class="card-text">Email: <?=$_SESSION['usuario']['email']?></p>
           <a href="" class="card-text">Cambiar contraseña</a>
           <br>
           <br>
