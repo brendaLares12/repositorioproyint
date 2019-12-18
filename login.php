@@ -29,7 +29,14 @@ if($_POST){
 
          }
      }
-  }
+  }else {
+    if(isset($_COOKIE['usuario'])){
+        $_SESSION['usuario'] = json_decode($_COOKIE['usuario'],true);
+    }
+    if (isset($_SESSION['usuario'])) {
+        header('Location: perfil-usuario.php');
+    }
+}
 }
 
 ?>
@@ -61,7 +68,7 @@ if($_POST){
           <main class="contenedor-form">
             <h2>Ingresar Usuario</h2>
             <form method="post">
-              
+                          
             <div class="form-group">
               <label for="email">Email de Usuario</label>
               <input type="email" name="email" placeholder="Ingresa email" class="form-control" id="email" value="<?= persistirDato($arrayDeErrores, 'email') ?>">
@@ -75,9 +82,12 @@ if($_POST){
             </div>
 
             <div class="form-group form-check">
-              <input type="checkbox" id="recordarme" name="recordarme" value="true">
+              <input type="checkbox" class="form-check-input" id="recordarme" name="recordarme" value="true">
               <label class="form-check-label" for="exampleCheck1">Recordarme</label>
             </div>
+            <p>
+              <a href="registrar.php">Si no tiene usuario registrese</a>
+            </p>
             <form class="formulario" method="POST">
 
 
