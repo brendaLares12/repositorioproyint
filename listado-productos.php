@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 
 ?>
@@ -24,13 +24,15 @@ session_start();
   <?php require_once 'HeadyFoot/header.php'  ?>
 <!--LISTADO DE PRODUCTOS LIBROS-->
 <!--LITERATURA UNIVERSAL-->
-<div>
+<br>
+<div class= "listado-productos">
   <h5 class="detalle-libros"><span class="detalle-libros1">Listado de libros</span></h5>
   <br>
   <h6 class="detalle-libro" id="LiteraturaUni"><span class= "detalle-libro1"><strong>Literatura Universal</strong></span></h6>
 </div>
 <br>
 <br>
+<div class= "listado-productos">
 <div class="row justify-content-around">
   <div class="col-md-4">
     <div class="container-cards">
@@ -69,7 +71,7 @@ session_start();
 </div>
 <!--LITERATURA INFANTIL/JUVENIL-->
  <br>
-<div>
+<div class= "listado-productos">
  <h6 class="detalle-libro" id="LiteraturaInf"><span class= "detalle-libro1" ><strong >Literatura Infantil/Juvenil</strong></span></h6>
 </div>
 <br>
@@ -112,7 +114,7 @@ session_start();
 </div>
 <br>
 <!--LITERATURA UNIVERSAL-->
-  <div>
+  <div class= "listado-productos">
     <h6 class="detalle-libro" id="HistoriaUni"><span class= "detalle-libro1"><strong>Historia Universal<strong></span></h6>
   </div>
   <br>
@@ -157,7 +159,7 @@ session_start();
    <!--LISTADO DE PRODUCTOS PAPELERÍA-->
 <!--ÚTILES ESCOLARES-->
 <br>
-<div>
+<div class= "listado-productos">
 <h5 class="detalle-libros"><span class="detalle-libros1">Listado de productos de papelería</span></h5>
 <br>
 <h6 class="detalle-libro"><span class= "detalle-libro1"><strong>Útiles escolares</strong></span></h6>
@@ -168,7 +170,7 @@ session_start();
   <div class="col-md-4">
     <div class="container-cards">
       <div class="img">
-        <a href=#><img src="img/mochilas.jpg" alt="" height="300px"></a>
+        <a href="carrito.php"><img src="img/mochilas.jpg" alt="" height="300px"></a>
         <br>
         <br>
         <h4 class="titulo-mochila"><strong>Mochilas para niños y niñas</strong></h4>
@@ -190,7 +192,7 @@ session_start();
   <div class="col-md-4">
     <div class="container-cards">
       <div class="img">
-        <a href=#><img src="img/faber-castell.jpg" alt="" height="300px"></a>
+        <a href="detalle-producto-libro.php"><img src="img/faber-castell.jpg" alt="" height="300px"></a>
         <br>
         <br>
         <h4 class="titulo-lapices" id="LibyAg"><strong>Lápices de colores "Faber-Castell"</strong></h4>
@@ -202,7 +204,7 @@ session_start();
 </div>
 <!--LIBRETAS Y AGENDAS-->
 <br>
-<div>
+<div  class= "listado-productos">
 <h6 class="detalle-libro"><span class= "detalle-libro1"><strong>Libretas y agendas</strong></span></h6>
 </div>
 <br>
@@ -234,7 +236,7 @@ session_start();
 </div>
   <!--TARJETAS Y BOLSAS KRAFT-->
   <br>
-  <div>
+  <div class= "listado-productos">
   <h6 class="detalle-libro" id="Tarj-Kraft"><span class= "detalle-libro1"><strong>Tarjetas y Bolsas kraft</strong></span></h6>
   </div>
   <br>
@@ -243,7 +245,7 @@ session_start();
     <div class="col-md-4">
       <div class="container-cards">
         <div class="img">
-          <a href=#><img src="img/tarjetas-1.jpg" alt="" width="500px" height="500px"></a>
+          <a href="#"><img src="img/tarjetas-1.jpg" alt="" width="500px" height="500px"></a>
           <br>
           <br>
           <h4 class="titulo-mochila"><strong>Tarjetas</strong></h4>

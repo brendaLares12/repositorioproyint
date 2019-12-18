@@ -61,15 +61,14 @@ if($_POST){
           <main class="contenedor-form">
             <h2>Ingresar Usuario</h2>
             <form method="post">
-                          
             <div class="form-group">
-              <label for="email">Email de Usuario</label>
+              <label for="email"><strong>Email de Usuario</strong></label>
               <input type="email" name="email" placeholder="Ingresa email" class="form-control" id="email" value="<?= persistirDato($arrayDeErrores, 'email') ?>">
               <small class="text-danger"><?= isset($arrayDeErrores['email']) ? $arrayDeErrores['email'] : "" ?></small>
             </div>
 
             <div class="form-group">
-              <label for="pass">Contraseña</label>
+              <label for="pass"><strong>Contraseña</strong></label>
               <input type="password" name="pass" placeholder="Ingresa contraseña" class="form-control" id="pass" value="" >
               <small class="text-danger"><?= isset($arrayDeErrores['pass']) ? $arrayDeErrores['pass'] : "" ?></small>
             </div>
@@ -77,22 +76,26 @@ if($_POST){
             <div class="form-group form-check">
               <input type="checkbox" class="form-check-input" id="recordarme" name="recordarme" value="true">
               <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+              <br>
+              <br>
+              <!-- ¿Olvidaste tu contraseña?-->
+              <div class="link">
+              <a href="forgot-password.php">¿Olvidaste tu contraseña?</a>
+            </div>
             </div>
             <p>
               <a href="registrar.php">Si no tiene usuario registrese</a>
             </p>
             <form class="formulario" method="POST">
-
-
-              <button class="boton-ingresar" name="button" type="submit" >Ingresar</button>
+              <button class="boton-ingresar" name="button" type="submit">Ingresar</button>
               <br>
               <br>
               <button class="boton-volver" type="button" name="button" onclick="history.back()">Volver</button>
               </form>
-          </main> 
+          </main>
           </div>
-        </div>
+          <br>
+          <br>
         <?php require_once 'HeadyFoot/footer.php' ?>
-
   </body>
 </html>

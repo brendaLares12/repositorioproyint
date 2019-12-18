@@ -30,8 +30,8 @@
       setcookie("contrasenia",$_POST['pass'],time()+(60*60*24*365),"/");
     }*/
   }
-  
-  
+
+
 ?>
 
 
@@ -59,43 +59,43 @@
     <main class="contenedor-form">
 
       <h2>Registro de Usuario</h2>
-      
+
       <form  method="post" enctype="multipart/form-data" >
         <div class="form-group">
-          <label for="nombre">Nombre:</label>
+          <label for="nombre"><strong>Nombre:</strong></label>
           <input name="nombre" type="text" id="nombre" class="form-control" placeholder="Nombre" value="<?= persistirDato($arrayDeErrores,'nombre'); ?>">
         <!-------------------------------------- (CONDICION)            ?            A              : B -->
           <small class="text-danger"><?= isset($arrayDeErrores['nombre']) ? $arrayDeErrores['nombre'] : "" ?></small></div>
         <!--=============================================================================================-->
         <div class="form-group">
-          <label for="apellido">Apellidos:</label>
+          <label for="apellido"><strong>Apellidos:</strong></label>
           <input name="apellido" type="text" id="apellido" class="form-control" placeholder="Apellidos" value="<?= persistirDato($arrayDeErrores,'apellido'); ?>">
           <small class="text-danger"><?= isset($arrayDeErrores['apellido']) ? $arrayDeErrores['apellido'] : "" ?></small>
         </div>
 
         <!--============================================================================================-->
         <div class="form-group">
-          <label for="email">Correo:</label>
+          <label for="email"><strong>Correo:</strong></label>
           <input name="email" type="text" id="email" class="form-control" placeholder="ejemplo@correo.com" value="<?= persistirDato($arrayDeErrores,'email'); ?>">
           <small class="text-danger"><?= isset($arrayDeErrores['email']) ? $arrayDeErrores['email'] : "" ?></small>
         </div>
         <!--=============================================================================================-->
 
         <div class="form-group">
-          <label for="pass">Contraseña:</label>
+          <label for="pass"><strong>Contraseña:</strong></label>
           <input name="pass" type="password" id="pass" class="form-control" placeholder="Contraseña" value="<?= persistirDato($arrayDeErrores,'pass'); ?>">
           <small class="text-danger"><?= isset($arrayDeErrores['pass']) ? $arrayDeErrores['pass'] : "" ?></small>
         </div>
         <!--=============================================================================================-->
 
         <div class="form-group">
-          <label for="repass">Repetir Contraseña:</label>
+          <label for="repass"><strong>Repetir Contraseña:</strong></label>
           <input name="repass" type="password" id="repass" class="form-control" placeholder="Repetir contraseña" value="<?= persistirDato($arrayDeErrores,'repass'); ?>">
           <small class="text-danger"><?= isset($arrayDeErrores['repass']) ? $arrayDeErrores['repass'] : "" ?></small>
         </div>
 
         <div class="form-group">
-          <label for="archivo">Foto de perfil:</label>
+          <label for="archivo"><strong>Foto de perfil:</strong></label>
           <input name="archivo" type="file" id="archivo">
         </div>
         <div class="form-group form-check">

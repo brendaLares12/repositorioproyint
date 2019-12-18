@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 
 ?>
@@ -26,40 +26,54 @@ session_start();
     <table class="table">
   <thead>
     <tr>
-      <th scope="col"></th>
       <th scope="col">Producto</th>
       <th scope="col">Precio Unitario</th>
       <th scope="col">Cantidad</th>
-      <th scope="col">Total</th>
+      <th scope="col">Subtotal</th>
     </tr>
   </thead>
+
   <tbody>
-    <tr>
-      <th scope="row"><i class="far fa-trash-alt"></i></th>
-      <td></td>
-      <td></td>
+    <!--PRIMER-PRODUCTO-->
+   <tr>
+      <td><img src="img/tomsawyer.jpg" alt="" height=50%><p><strong><br> Libro:<br>"Las Aventuras de Tom Sayer"</strong></p></td>
+      <td class="precio"><p><strong>$300</strong></p></td>
       <td>
         <label for="cantidad">
-        <input type="number" name="cantidad" id="cantidad" min="0" max="9">
+        <input type="number" name="cantidad" id="cantidad" min="1" max="9">
       </td>
-      <td></td>
+      <td><p><strong>$300</strong></p></td>
+      <th scope="row"><a href="#" title="Quitar artículos" class="far fa-trash-alt"></a></th>
     </tr>
+
+    <!--SEGUNDO-PRODUCTO-->
     <tr>
-      <th scope="row"></th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <th scope="row"><img src="img/faber-castell.jpg" alt="" height=30%><p><br><strong>Lápices de color<br>"Faber Castell" X 24</strong></p></th>
+      <p></p>
+      <td class="precio"><p><strong>$700</strong></p></td>
+      <td>
+        <label for="cantidad">
+        <input type="number" name="cantidad" id="cantidad" min="1" max="9">
+      </td>
+      <td><p><strong>$700</strong></p></td>
+      <th scope="row"><a href="#" title="Quitar artículos" class="far fa-trash-alt"></a></th>
     </tr>
+
+    <!--TERCER-PRODUCTO-->
     <tr>
-      <th scope="row"></th>
-      <td></td>
-      <td></td>
-      <td></td>
+      <th scope="row"><img src="img/mochilas.jpg" alt="" height=40%><p><br><strong>Mochilas para niños y niñas</strong></p>  <a href="listado-productos.php">◀ Seguir comprando</a></th>
+      <td class="precio"><p><strong>$2300</strong></p></td>
+      <td>
+      <label for="cantidad">
+      <input type="number" name="cantidad" id="cantidad" min="1" max="9">
+    </td>
+      <td><p><strong>$2300</strong></p></td>
+      <th scope="row"><a href="#" title="Quitar artículos" class="far fa-trash-alt"></a></th>
     </tr>
   </tbody>
 </table>
-			
+<br>
+<br>
 	  <?php require_once 'HeadyFoot/footer.php' ?>
 	</div>
   </body>

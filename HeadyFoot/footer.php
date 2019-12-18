@@ -1,4 +1,5 @@
 <footer>
+    <div class="footer">
         <div class="row">
           <div class="col-sm-6 ubicacion">
             <h4>Ubicación</h4>
@@ -16,4 +17,5 @@
           </div>
         </div>
       </div>
+    </div>
       </footer>
