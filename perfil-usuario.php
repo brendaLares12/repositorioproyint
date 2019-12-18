@@ -1,5 +1,7 @@
 <?php 
+
 session_start();
+
 
 ?>
 <!DOCTYPE html>
@@ -25,8 +27,8 @@ session_start();
 
 <!--PERFIL-USUARIO-->
 <!--INFORMACION-USUARIO-->
-
   <div class=titulo-perfil><h2>Mi Perfil</h2></div>
+
   <div class="row justify-content-around">
     <div class="col-4">
       <nav class="nav flex-column">
@@ -72,9 +74,11 @@ session_start();
       </div>
     </div>
     </div>
+    
 <!--PERFIL-USUARIO-END-->
 <?php require_once 'HeadyFoot/footer.php' ?>
 
   </div>
   </body>
 </html>
+
