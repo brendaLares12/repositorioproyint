@@ -1,7 +1,9 @@
 <?php
   session_start();
   require_once 'funciones/funciones.php';
-
+    if(isset($_SESSION['usuario'])){
+ header("Location: perfil-usuario.php");
+}
   $arrayDeErrores="";
 
   if($_POST){
@@ -20,6 +22,8 @@
       //enviar datos del usuario a la BD
       $jsonDeUsuario=json_encode($usuarioFinal);
       file_put_contents('usuarios.json',$jsonDeUsuario . PHP_EOL  ,FILE_APPEND);
+
+      $_SESSION['usuario'] = $usuarioFinal;
       header('Location: login.php');
       exit;
     }

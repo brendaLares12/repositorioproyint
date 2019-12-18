@@ -1,0 +1,8 @@
+Registro debe loguear y redireccionar a mi perfil
+Login de usuario no valida si no existe el usuario.
+perfil-usuario.php no deberia estar accesible si no estas logueado
+recordar no funciona
+registrar y login no deberian estar accesibles cuando hay un usuario con la sesion iniciada
+acceso al perfil desde el menu de usuario
+deja registrar un usuario con el mismo mail no esta bien
+mostrar foto de perfil en el perfil

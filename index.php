@@ -1,6 +1,9 @@
 <?php 
 session_start();
 
+ if(isset($_COOKIE['usuario'])){
+    $_SESSION['usuario']= json_decode($_COOKIE['usuario'], true);
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
