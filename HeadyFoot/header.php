@@ -1,24 +1,25 @@
-<header>
-        <img src="img/icono-pag.png" alt="icono">
-        <h1>Libreria Lablic</h1>
-        <div class="btn-group" role="group">
-      <button id="btnGroupDrop1" type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fas fa-user"></i>
-      </button>
-      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-        <?php if(!isset($_SESSION['usuario'])): ?>
+<header class="fixed-top">
+  <img src="img/icono-pag.png" alt="icono">
+  <h1>Libreria Lablic</h1>
+  <div class="btn-group" role="group"> 
+    <button id="btnGroupDrop1" type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="fas fa-user"></i>
+    </button>
+    <div class="vent-user dropdown-menu" aria-labelledby="btnGroupDrop1">
+      <?php if (!isset($_SESSION['usuario'])) : ?>
         <a class="dropdown-item" href="login.php">Ingresar</a>
         <a class="dropdown-item" href="registrar.php">Registrar</a>
-        <?php endif; ?>
-        <?php if(isset($_SESSION['usuario'])): ?>
-          Hola <?=$_SESSION['usuario']['nombre'];?>
+      <?php endif; ?>
+      <?php if (isset($_SESSION['usuario'])) : ?>
+        Hola <?= $_SESSION['usuario']['nombre']; ?>
         <a class="dropdown-item btn-danger" href="logout.php">Salir</a>
-        <?php endif; ?>
-      </div>
+      <?php endif; ?>
     </div>
-      <button onclick="location.href='carrito.php'" type="button" class="btn btn-transparent btn-compra"><i class="fas fa-shopping-cart"></i></button>
-      </header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+  </div>
+
+  <button onclick="location.href='carrito.php'" type="button" class="btn btn-transparent btn-compra"><i class="fas fa-shopping-cart"></i></button>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <a class="navbar-brand" href="index.php">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -34,14 +35,14 @@
             <a class="dropdown-item" href="listado-productos.php#HistoriaUni">Historia Universal</a>
             <div class="dropdown-divider"></div>
           </div>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Papelería</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="listado-productos.php#Utiles">Útiles Escolares</a>
-              <a class="dropdown-item" href="listado-productos.php#LibyAg">Libretas y Agendas</a>
-              <a class="dropdown-item" href="listado-productos.php#Tarj-Kraft">Tarjetas y Bolsas kraft</a>
-              <div class="dropdown-divider"></div>
-            </div>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Papelería</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="listado-productos.php#Utiles">Útiles Escolares</a>
+            <a class="dropdown-item" href="listado-productos.php#LibyAg">Libretas y Agendas</a>
+            <a class="dropdown-item" href="listado-productos.php#Tarj-Kraft">Tarjetas y Bolsas kraft</a>
+            <div class="dropdown-divider"></div>
+          </div>
 
         <li class="nav-item">
           <a class="nav-link" href="faq.php">F.A.Q</a>
@@ -59,3 +60,4 @@
       <br>
     </div>
   </nav>
+</header>
