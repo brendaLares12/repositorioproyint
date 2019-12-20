@@ -55,10 +55,8 @@ h1{
 /*ventana usuario*/
 .vent-user{
   position: absolute;
-  will-change: transform;
   top: 0px;
   left: 0px;
-  transform: translate3d(-200px, 38px, 15px);
 
 }
 /*color boton busqueda y de boton ver productos*/
