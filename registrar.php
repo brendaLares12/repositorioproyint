@@ -2,7 +2,7 @@
 session_start();
 require_once 'funciones/funciones.php';
 if(isset($_SESSION['usuario'])){
- header("Location: perfil-usuario.php");
+ header("Location: index.php");
 }
 
 $arrayDeErrores = "";
@@ -10,16 +10,11 @@ $arrayDeErrores = "";
 if ($_POST) {
   $arrayDeErrores = validarRegistracion($_POST);
   if (count($arrayDeErrores) === 0) {
-    //registro al usuario
-    $usuarioFinal = [
-      'id' => uniqid(),
-      'nombre' => trim($_POST['nombre']),
-      'apellido' => trim($_POST['apellido']),
-      'email' => $_POST['email'],
-      'pass' => password_hash($_POST['pass'], PASSWORD_DEFAULT)
-    ];
-    guardarFotoPerfil();
-
+    recorrerJson(abrirJson(),infoUsuario());
+    //informacion del usuario
+    infoUsuario();
+    $usuarioFinal=infoUsuario();
+    
     //enviar datos del usuario a la BD
     $jsonDeUsuario = json_encode($usuarioFinal);
     file_put_contents('usuarios.json', $jsonDeUsuario . PHP_EOL, FILE_APPEND);
@@ -28,14 +23,10 @@ if ($_POST) {
     header('Location: login.php');
     exit;
   }
-  /*if ($_POST['recordar']=="recordar"){
-      setcookie("nombre",$_POST['nombre'],time()+(60*60*24*365),"/");
-      setcookie("apellido",$_POST['apellido'],time()+(60*60*24*365),"/");
-      setcookie("email",$_POST['email'],time()+(60*60*24*365),"/");
-      setcookie("contrasenia",$_POST['pass'],time()+(60*60*24*365),"/");
-    }*/
+  if ($_POST['recordar']=="recordar"){
+      setcookie('usuario', json_encode($usuarioFinal), time()+(60*60*24*365),"/");   
+   }
 }
-
 
 ?>
 
