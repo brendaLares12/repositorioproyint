@@ -1,4 +1,3 @@
-
 <?php
   session_start();
   require_once 'funciones/funciones.php';
@@ -15,11 +14,8 @@ if($_POST){
          $usuarioFinal = json_decode($usuario, true);
          if($usuarioFinal['email'] == $_POST['email']) {
             if (password_verify($_POST['pass'], $usuarioFinal['pass']) ){
-             /* $_SESSION['emailUsuario'] = $usuarioFinal['email'];*/
               $_SESSION['usuario'] = $usuarioFinal;
               if (isset($_POST['recordarme']) && ($_POST['recordarme']) == true){
-                 /*setcookie('emailUsuario', $usuarioFinal['email'], time() + 60 * 60 * 24 * 7);
-                 setcookie('passUsuario', $usuarioFinal['pass'], time() + 60 * 60 * 24 * 7);*/
                 setcookie('usuario',json_encode($usuarioFinal),time()+604800);
               }
               header('Location: perfil-usuario.php');
