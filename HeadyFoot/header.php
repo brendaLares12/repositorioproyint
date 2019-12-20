@@ -1,18 +1,21 @@
 <header class="fixed-top">
+
   <img src="img/icono-pag.png" alt="icono">
   <h1>Libreria Lablic</h1>
-  <div class="btn-group" role="group"> 
+  <div class="btn-group" role="group">
     <button id="btnGroupDrop1" type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <i class="fas fa-user"></i>
     </button>
-    <div class="vent-user dropdown-menu" aria-labelledby="btnGroupDrop1">
+    <div class="vent-user dropdown-menu " style="position: absolute;will-change: transform;top: 0px;left: 0px;transform: translate3d(-200px, 38px, 0px);text-align-last: center;" aria-labelledby="btnGroupDrop1">
       <?php if (!isset($_SESSION['usuario'])) : ?>
         <a class="dropdown-item" href="login.php">Ingresar</a>
         <a class="dropdown-item" href="registrar.php">Registrar</a>
       <?php endif; ?>
+
       <?php if (isset($_SESSION['usuario'])) : ?>
-        Hola <?= $_SESSION['usuario']['nombre']; ?>
-        <a class="dropdown-item btn-danger" href="logout.php">Salir</a>
+        <a class="dropdown-item" href="perfil-usuario.php">
+          Hola <?= $_SESSION['usuario']['nombre']; ?></a>
+        <a class="dropdown-item btn-danger" href="logout.php" value="salir">Salir</a>
       <?php endif; ?>
     </div>
   </div>
