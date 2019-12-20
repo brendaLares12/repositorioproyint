@@ -8,6 +8,8 @@ function pre($algo) {
 
 function validarRegistracion($array){
   $errores=[];
+  $_SESSION['erroremail'] ="";
+  
   //validacion de nombre
   if (isset($array["nombre"])) {
     if (empty($array["nombre"])) {
@@ -55,17 +57,32 @@ function validarRegistracion($array){
   return $errores;
 }
 
-function guardarFotoPerfil(){
+function infoUsuario(){
+  $usuarioFinal = [
+    'id' => uniqid(),
+    'nombre' => trim($_POST['nombre']),
+    'apellido' => trim($_POST['apellido']),
+    'email' => $_POST['email'],
+    'pass' => password_hash($_POST['pass'], PASSWORD_DEFAULT)
+  ];
   if ($_FILES["archivo"]["error"] === UPLOAD_ERR_OK) {
-    $nombre=$_FILES["archivo"]["name"];
-    $archivo=$_FILES["archivo"]["tmp_name"];
-    $ext=pathinfo($nombre,PATHINFO_EXTENSION);
+    if (pathinfo($_FILES['userimage']['name'], PATHINFO_EXTENSION) == 'jpg' || pathinfo($_FILES['userimage']['name'], PATHINFO_EXTENSION) == 'jpeg' || pathinfo($_FILES['userimage']['name'], PATHINFO_EXTENSION) == 'png'){
+      $archivo = $_FILES["archivo"]["tmp_name"];
+      $nombre = pathinfo($_FILES['archivo']['name'], PATHINFO_FILENAME);
+      $ext = pathinfo($nombre, PATHINFO_EXTENSION);
 
-    $miArchivo= "imagenPerfil/";
-    $miArchivo=$miArchivo . uniqid() . "." . $ext;
-    move_uploaded_file($archivo, $miArchivo);
+      move_uploaded_file($archivo, 'imagenPerfil/' . $nombre . '.' . $ext);
+      $usuarioFinal['image'] = 'imagenPerfil/' . $nombre . '.' . $ext;
 
-  }
+    }
+  };
+  return $usuarioFinal;
+}
+
+function abrirJson(){
+  $jsonDeUsuario = file_get_contents('usuarios.json');
+  $usuarios = json_decode($jsonDeUsuario, true);
+  return $usuarios;
 }
 
 function persistirDato($arrayErrores,$string){
@@ -74,6 +91,20 @@ function persistirDato($arrayErrores,$string){
   }else {
     if (isset($_POST[$string])) {
       return $_POST[$string];
+    }
+  }
+}
+
+function recorrerJson($usuarios,$usuarioFinal){
+  for ($i = 0; $i < count($usuarios); $i++) {
+    foreach ($usuarios[$i] as $key => $value) {
+      if ($key == 'email') {
+        if ($value == $usuarioFinal['email']) {
+          $_SESSION['erroremail'] = "El usuario ya existe";
+          header('Location: registrar.php');
+          exit;
+        };
+      };
     }
   }
 }
