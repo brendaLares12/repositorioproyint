@@ -20,10 +20,10 @@ session_start();
     <link rel="icon" type="image/png" href="img/icono-pag.png">
   </head>
   <body>
-  <div class="container">
+  <!-- <div class="container"> -->
   <?php require_once 'HeadyFoot/header.php'  ?>
 
-    <main >
+    <main style="margin-top:200px" >
         <div id="carouselExampleIndicators" class="carousel slide d-none d-md-block" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -129,6 +129,6 @@ session_start();
     </main>
     <?php require_once 'HeadyFoot/footer.php' ?>
 
-  </div>
+  <!-- </div> -->
   </body>
 </html>
