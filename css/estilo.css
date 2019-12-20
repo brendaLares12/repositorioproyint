@@ -52,6 +52,15 @@ h1{
 .btn-group{
   float: right;
 }
+/*ventana usuario*/
+.vent-user{
+  position: absolute;
+  will-change: transform;
+  top: 0px;
+  left: 0px;
+  transform: translate3d(-200px, 38px, 15px);
+
+}
 /*color boton busqueda y de boton ver productos*/
 .btn-primary {
     color: #fff;
@@ -63,7 +72,10 @@ h1{
   float: right;
   background-color: transparent;
 }
-
+main{
+  margin: 17px;
+  justify-content: center;
+}
 /*diseño carrusel*/
 
 .carousel-inner{
@@ -249,14 +261,10 @@ background-color: white;
 /*FOOTER*/
 footer{
   border-top: 2px solid pink;
-  margin-top: 15px;
-  height: 100px;
-}
-
-.footer{
+  margin-top: 10px;
+  height: -webkit-fill-available;
   background-color: rgba(255, 99, 71, 0.5);
 }
-
 
 h6{
   text-align: center;
