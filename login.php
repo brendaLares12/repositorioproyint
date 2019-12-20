@@ -1,6 +1,13 @@
 <?php
   session_start();
   require_once 'funciones/funciones.php';
+  if(isset($_SESSION['usuario'])){
+      header("Location: perfil-usuario.php");
+    }
+    if(isset($_COOKIE['usuario'])){
+      $_SESSION['usuario']= json_decode($_COOKIE['usuario'], true);
+    }
+
 
 $arrayDeErrores = "";
 
