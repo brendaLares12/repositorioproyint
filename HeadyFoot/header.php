@@ -1,5 +1,15 @@
 <header class="fixed-top">
 
+<?php
+
+/*if (isset($_SESSION['usuario']['nombre'])) {
+  $nombreUsuario = $_SESSION['usuario']['nombre'];
+} 
+if (isset($_SESSION['usuario']['archivo'])) {
+  $avatar = $_SESSION['usuario']['archivo'];
+}
+  var_dump($avatar);exit;*/
+?>
   <img src="img/icono-pag.png" alt="icono">
   <h1>Libreria Lablic</h1>
   <div class="btn-group" role="group">
@@ -14,7 +24,9 @@
 
       <?php if (isset($_SESSION['usuario'])) : ?>
         <a class="dropdown-item" href="perfil-usuario.php">
-          Hola <?= $_SESSION['usuario']['nombre']; ?></a>
+          <span class="rounded-circle border border-primary" style="background-image: url('<?= $_SESSION['usuario']['archivo']?>'); background-size: cover;  width:42px; height: 42px;"></span>
+          Hola <?= $_SESSION['usuario']['nombre'] ; ?>
+        </a>
         <a class="dropdown-item btn-danger" href="logout.php" value="salir">Salir</a>
       <?php endif; ?>
     </div>
