@@ -27,7 +27,7 @@ if ($_POST) {
           }
           header('Location: perfil-usuario.php');
         } else {
-          $errores['password'] = 'La clave no es correcta';
+          $errores['pass'] = 'La clave no es correcta';
         }
       }
     }
