@@ -57,27 +57,27 @@ function validarRegistracion($array){
   return $errores;
 }
 
-function infoUsuario(){
-  $usuarioFinal = [
-    'id' => uniqid(),
-    'nombre' => trim($_POST['nombre']),
-    'apellido' => trim($_POST['apellido']),
-    'email' => $_POST['email'],
-    'pass' => password_hash($_POST['pass'], PASSWORD_DEFAULT)
-  ];
-  if ($_FILES["archivo"]["error"] === UPLOAD_ERR_OK) {
-    if (pathinfo($_FILES['userimage']['name'], PATHINFO_EXTENSION) == 'jpg' || pathinfo($_FILES['userimage']['name'], PATHINFO_EXTENSION) == 'jpeg' || pathinfo($_FILES['userimage']['name'], PATHINFO_EXTENSION) == 'png'){
-      $archivo = $_FILES["archivo"]["tmp_name"];
-      $nombre = pathinfo($_FILES['archivo']['name'], PATHINFO_FILENAME);
-      $ext = pathinfo($nombre, PATHINFO_EXTENSION);
+// function infoUsuario(){
+//   $usuarioFinal = [
+//     'id' => uniqid(),
+//     'nombre' => trim($_POST['nombre']),
+//     'apellido' => trim($_POST['apellido']),
+//     'email' => $_POST['email'],
+//     'pass' => password_hash($_POST['pass'], PASSWORD_DEFAULT)
+//   ];
+//   if ($_FILES["archivo"]["error"] === UPLOAD_ERR_OK) {
+//     if (pathinfo($_FILES['userimage']['name'], PATHINFO_EXTENSION) == 'jpg' || pathinfo($_FILES['userimage']['name'], PATHINFO_EXTENSION) == 'jpeg' || pathinfo($_FILES['userimage']['name'], PATHINFO_EXTENSION) == 'png'){
+//       $archivo = $_FILES["archivo"]["tmp_name"];
+//       $nombre = pathinfo($_FILES['archivo']['name'], PATHINFO_FILENAME);
+//       $ext = pathinfo($nombre, PATHINFO_EXTENSION);
 
-      move_uploaded_file($archivo, 'imagenPerfil/' . $nombre . '.' . $ext);
-      $usuarioFinal['image'] = 'imagenPerfil/' . $nombre . '.' . $ext;
+//       move_uploaded_file($archivo, 'imagenPerfil/' . $nombre . '.' . $ext);
+//       $usuarioFinal['image'] = 'imagenPerfil/' . $nombre . '.' . $ext;
 
-    }
-  };
-  return $usuarioFinal;
-}
+//     }
+//   };
+//   return $usuarioFinal;
+// }
 
 function abrirJson(){
   $jsonDeUsuario = file_get_contents('usuarios.json');
@@ -98,7 +98,7 @@ function persistirDato($arrayErrores,$string){
 function recorrerJson($usuarios,$usuarioFinal){
   for ($i = 0; $i < count($usuarios); $i++) {
     foreach ($usuarios[$i] as $key => $value) {
-      if ($key == 'email') {
+      if ($key == $_POST['email']) {
         if ($value == $usuarioFinal['email']) {
           $_SESSION['erroremail'] = "El usuario ya existe";
           header('Location: registrar.php');
