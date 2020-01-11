@@ -1,20 +1,20 @@
 <header class="fixed-top">
 
-<?php
+  <?php
 
-/*if (isset($_SESSION['usuario']['nombre'])) {
+  /*if (isset($_SESSION['usuario']['nombre'])) {
   $nombreUsuario = $_SESSION['usuario']['nombre'];
 } 
 if (isset($_SESSION['usuario']['archivo'])) {
   $avatar = $_SESSION['usuario']['archivo'];
 }
   var_dump($avatar);exit;*/
-?>
+  ?>
   <img src="img/icono-pag.png" alt="icono">
   <h1>Libreria Lablic</h1>
   <div class="btn-group" role="group">
     <button id="btnGroupDrop1" type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <i class="fas fa-user"></i>
+      <img src='imagenPerfil/<?= $_SESSION['usuario']['image']; ?>' alt="" style="height:20px; width:15px;">
     </button>
     <div class="vent-user dropdown-menu " style="position: absolute;will-change: transform;top: 0px;left: 0px;transform: translate3d(-200px, 38px, 0px);text-align-last: center;" aria-labelledby="btnGroupDrop1">
       <?php if (!isset($_SESSION['usuario'])) : ?>
@@ -24,8 +24,9 @@ if (isset($_SESSION['usuario']['archivo'])) {
 
       <?php if (isset($_SESSION['usuario'])) : ?>
         <a class="dropdown-item" href="perfil-usuario.php">
-          <span class="rounded-circle border border-primary" style="background-image: url('<?= $_SESSION['usuario']['archivo']?>'); background-size: cover;  width:42px; height: 42px;"></span>
-          Hola <?= $_SESSION['usuario']['nombre'] ; ?>
+          <span class="rounded-circle border border-primary" style="background-image: url('imagenPerfil/5df98608d726c.png'); background-size: cover;  width:42px; height: 42px;"></span>
+          <!--<img src="img/icono-usuario.jpg" alt="..." class="rounded-circle" >-->
+          Hola <?= $_SESSION['usuario']['nombre']; ?>
         </a>
         <a class="dropdown-item btn-danger" href="logout.php" value="salir">Salir</a>
       <?php endif; ?>
