@@ -10,11 +10,25 @@ $arrayDeErrores = "";
 if ($_POST) {
   $arrayDeErrores = validarRegistracion($_POST);
   if (count($arrayDeErrores) === 0) {
-    recorrerJson(abrirJson(),infoUsuario());
     //informacion del usuario
-    infoUsuario();
-    $usuarioFinal=infoUsuario();
-    
+    $usuarioFinal = [
+      'id' => uniqid(),
+      'nombre' => trim($_POST['nombre']),
+      'apellido' => trim($_POST['apellido']),
+      'email' => $_POST['email'],
+      'pass' => password_hash($_POST['pass'], PASSWORD_DEFAULT)
+    ];
+    if ($_FILES["archivo"]["error"] === UPLOAD_ERR_OK) {
+      if (pathinfo($_FILES['archivo']['name'], PATHINFO_EXTENSION) == 'jpg' || pathinfo($_FILES['archivo']['name'], PATHINFO_EXTENSION) == 'jpeg' || pathinfo($_FILES['archivo']['name'], PATHINFO_EXTENSION) == 'png') {
+        $archivo = $_FILES["archivo"]["tmp_name"];
+        $nombre = pathinfo($_FILES['archivo']['name'], PATHINFO_FILENAME);
+        $ext = pathinfo($nombre, PATHINFO_EXTENSION);
+        move_uploaded_file($archivo, 'imagenPerfil/' . $nombre . '.' . $ext);
+        $usuarioFinal['image'] = 'imagenPerfil/' . $nombre . '.' . $ext;
+      }
+    };
+    return $usuarioFinal;
+  }
     //enviar datos del usuario a la BD
     $jsonDeUsuario = json_encode($usuarioFinal);
     file_put_contents('usuarios.json', $jsonDeUsuario . PHP_EOL, FILE_APPEND);
@@ -26,7 +40,6 @@ if ($_POST) {
   if ($_POST['recordar']=="recordar"){
       setcookie('usuario', json_encode($usuarioFinal), time()+(60*60*24*365),"/");   
    }
-}
 
 ?>
 
