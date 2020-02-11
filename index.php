@@ -131,6 +131,8 @@ if(isset($_COOKIE['usuario'])){
             </div>
             </section>
     </main>
+    <br>
+    <br>
     <?php require_once 'HeadyFoot/footer.php' ?>
 
   <!-- </div> -->

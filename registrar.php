@@ -32,13 +32,13 @@ if ($_POST) {
     //enviar datos del usuario a la BD
     $jsonDeUsuario = json_encode($usuarioFinal);
     file_put_contents('usuarios.json', $jsonDeUsuario . PHP_EOL, FILE_APPEND);
-    
+
     $_SESSION['usuario'] = $usuarioFinal;
     header('Location: login.php');
     exit;
   }
   if ($_POST['recordar']=="recordar"){
-      setcookie('usuario', json_encode($usuarioFinal), time()+(60*60*24*365),"/");   
+      setcookie('usuario', json_encode($usuarioFinal), time()+(60*60*24*365),"/");
    }
 
 ?>
@@ -90,6 +90,7 @@ if ($_POST) {
             <input name="email" type="text" id="email" class="form-control" placeholder="ejemplo@correo.com" value="<?= persistirDato($arrayDeErrores, 'email'); ?>">
             <small class="text-danger"><?= isset($arrayDeErrores['email']) ? $arrayDeErrores['email'] : "" ?></small>
           </div>
+          
           <!--=============================================================================================-->
 
           <div class="form-group">

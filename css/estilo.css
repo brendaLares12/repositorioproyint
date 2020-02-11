@@ -52,6 +52,12 @@ h1{
 .btn-group{
   float: right;
 }
+.card{
+box-shadow: 0 8px 15px lightgray;
+border-radius: 10px;
+}
+
+
 /*ventana usuario*/
 .vent-user{
   position: absolute;
@@ -139,6 +145,7 @@ h6{
   padding: 30px;
   border: 1px solid gold;
   width: -webkit-fill-available;
+ 
 }
 .contenedor-contacto,.contenedor-login,.contenedor-registrar{
   display: flex;
@@ -168,7 +175,6 @@ h6{
   max-width: 100%;
   display: flex;
   justify-content: center;
-
 }
 
 .contenedor-email {
@@ -255,6 +261,16 @@ background-color: white;
   padding-right: 25px;
 }
 
+.enviar-faq{
+  text-align: center;
+  background-color:pink;
+  border-color:gold;
+  color:black;
+  width:20%;
+  border-radius: 20px;
+  align-items: flex-end;
+}
+
 
 /*FOOTER*/
 footer{
@@ -329,10 +345,15 @@ text-transform: uppercase;
   background-color: pink;
   padding: 10px;
 }
+
+
 .container-cards{
   display: flex;
   justify-content: space-around;
+  box-shadow: 0 5px 10px lightgray;
+  border-radius: 6px;
 }
+
 .boton-comprar{
   background-color: pink;
   border-color: gold;
@@ -353,6 +374,7 @@ text-transform: uppercase;
 .container-cards-1{
   display: flex;
   justify-content: space-around;
+  border-radius: 6px 6px 0px 0px;
 }
 
 .titulo-mochila{

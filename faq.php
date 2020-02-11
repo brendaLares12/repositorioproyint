@@ -29,6 +29,14 @@ session_start();
       <h2 class="FQtitulo">PREGUNTAS FRECUENTES</h2>
 
       <div class="preguntas">
+      <div class="form-group">
+            <label for=""><strong>Agregar preguntas :</strong></label>
+            <input name="" type="text" class="form-control" placeholder="" value="">
+            <br>
+            <button class="enviar-faq" type="submit">Enviar</button>
+        
+          </div>
+          <br>
         <h6 class="pregunta"><strong>¿Cómo es la forma de pago?</strong></h6>
         <p> Se podrá pagar los pedidos con: Tarjeta de crédito, Tarjeta de débito, Transferencia Bancaria o Efectivo a través de PagoFacil o RapiPago.
         </p>
@@ -43,6 +51,7 @@ session_start();
         <h6 class="pregunta"><strong>¿Cómo se realiza el seguimiento del pedido? </strong></h6>
         <p>En el mismo momento en que se realiza la compra, se recibe un mail de confirmación de Compra con un link donde se podrá realizar seguimiento todo el tiempo del envío. Al realizar el Pago se recibirá otro mail y otro cuando se realice el pedido.
         </p>
+        
         <br>
         <br>
       </div>

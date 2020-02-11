@@ -4,6 +4,12 @@ require_once 'funciones/funciones.php';
 
 $errores = "";
 
+
+$preguntas = [
+  
+]
+
+
 ?>
 
 <!DOCTYPE html>
@@ -32,15 +38,17 @@ $errores = "";
     <div class="container-form">
       <div class="contenedor-email">
         <h3 align="center">Cambiá tu contraseña</h3>
-        <p align="center">Te enviaremos un email para que puedas cambiar tu contraseña.</p>
+        <p align="center">Contesta la siguiente pregunta para poder cambiar tu contraseña.</p>
         <br>
         <div class="container-email">
           <form method="post" enctype="multipart/form-data">
-            <label for="email"><strong>Email:</strong></label>
-            <br>
-            <div>
-              <input type="email" id="email" class="campo-email" name="email" placeholder="Ingresa tu email">
-            </div>
+  
+            
+            <div class="form-group">
+            <label for="email"><strong>¿Cuál fue el último libro que leíste?:</strong></label>
+            <input name="email" type="text"  class="form-control" placeholder="" value="">
+            <small class="text-danger"></small>
+          </div>
             <br>
             <div class="container-link">
               <a href="login.php" class="volver-login">Volver a Login</a>
