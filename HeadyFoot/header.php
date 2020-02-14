@@ -4,7 +4,7 @@
 
   /*if (isset($_SESSION['usuario']['nombre'])) {
   $nombreUsuario = $_SESSION['usuario']['nombre'];
-} 
+}
 if (isset($_SESSION['usuario']['archivo'])) {
   $avatar = $_SESSION['usuario']['archivo'];
 }
