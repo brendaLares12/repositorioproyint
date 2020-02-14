@@ -21,7 +21,7 @@ if(isset($_COOKIE['usuario'])){
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/estilo.css">
     <title>Libreria Lablic</title>
-    <link rel="icon" type="image/png" href="img/icono-pag.png">
+    <link rel="icon" type="image/png" href="img/icono-pag">
   </head>
   <body>
   <!-- <div class="container"> -->
@@ -79,7 +79,7 @@ if(isset($_COOKIE['usuario'])){
           <div class="card-body">
           <h5 class="card-title">Literatura Universal</h5>
           <p class="card-text">Encontrarás las obras más destacadas de la literatura universal.</p>
-          <a href="listado-productos.php#LiteraturaUni" class="btn btn-primary">Ver productos</a>
+          <div class = "button-link"><a href="listado-productos.php#LiteraturaUni" class="btn btn-primary">Ver productos</a></div>
           </div>
         </div>
         <div class="card">
@@ -87,7 +87,7 @@ if(isset($_COOKIE['usuario'])){
           <div class="card-body">
           <h5 class="card-title">Literatura Infantil/Juvenil</h5>
           <p class="card-text">En nuestro sitio encontrarás libros para chicos de todas las edades.</p>
-          <a href="listado-productos.php#LiteraturaInf" class="btn btn-primary">Ver productos</a>
+          <div class = "button-link_2"><a href="listado-productos.php#LiteraturaInf" class="btn btn-primary">Ver productos</a></div>
         </div>
         </div>
         <div class="card">
@@ -95,7 +95,7 @@ if(isset($_COOKIE['usuario'])){
           <div class="card-body">
           <h5 class="card-title">Historia Universal</h5>
           <p class="card-text"> Encontrarás la recopilación de los hechos de mayor importancia que ha atravesado el hombre desde sus orígenes hasta la actualidad.</p>
-          <a href="listado-productos.php#HistoriaUni" class="btn btn-primary">Ver productos</a>
+          <div class = "button-link"><a href="listado-productos.php#HistoriaUni" class="btn btn-primary">Ver productos</a></div>
         </div>
         </div>
       </div>
@@ -109,7 +109,7 @@ if(isset($_COOKIE['usuario'])){
                 <div class="card-body">
                 <h5 class="card-title">Útiles Escolares</h5>
                 <p class="card-text">Tenemos todo lo necesario para el comienzo de clases.</p>
-                <a href="listado-productos.php#Utiles" class="btn btn-primary">Ver productos</a>
+                <div class = "button-link"><a href="listado-productos.php#Utiles" class="btn btn-primary">Ver productos</a></div>
                 </div>
               </div>
               <div class="card">
@@ -117,7 +117,7 @@ if(isset($_COOKIE['usuario'])){
                 <div class="card-body">
                 <h5 class="card-title">Libretas y Agendas</h5>
                 <p class="card-text">Todo tipo de libretas y agendas para tu escritorio u oficina.</p>
-                <a href="listado-productos.php#LibyAg" class="btn btn-primary">Ver productos</a>
+                <div class = "button-link"><a href="listado-productos.php#LibyAg" class="btn btn-primary">Ver productos</a></div>
               </div>
               </div>
               <div class="card">
@@ -125,7 +125,7 @@ if(isset($_COOKIE['usuario'])){
                 <div class="card-body">
                 <h5 class="card-title">Tarjetas y Bolsas kraft</h5>
                 <p class="card-text">Tarjetas y bolsas  para personalizar tus regalos</p>
-                <a href="listado-productos.php#Tarj-Kraft" class="btn btn-primary">Ver productos</a>
+                <div class = "button-link"><a href="listado-productos.php#Tarj-Kraft" class="btn btn-primary">Ver productos</a></div>
               </div>
               </div>
             </div>

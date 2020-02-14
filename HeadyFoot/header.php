@@ -10,7 +10,7 @@ if (isset($_SESSION['usuario']['archivo'])) {
 }
   var_dump($avatar);exit;*/
   ?>
-  <img src="img/book-face.png" alt="icono">
+  <img src="img/icono-pag.png" alt="icono">
   <h1>Libreria Lablic</h1>
   <div class="btn-group" role="group">
     <button id="btnGroupDrop1" type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

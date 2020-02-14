@@ -5,6 +5,7 @@
             <h4>Ubicación</h4>
             <p>Mitre 100</p>
             <p>Rosario,Santa Fe</p>
+            <p> © 2019-2020 Todos los derechos reservados</p>
           </div>
           <div class="col-sm-6">
             <h4>Encontranos en nuestras redes</h4>
