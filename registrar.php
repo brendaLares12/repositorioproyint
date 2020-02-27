@@ -1,6 +1,8 @@
 <?php
+include_once("pdo.php");
 session_start();
 require_once 'funciones/funciones.php';
+require_once 'funciones/funcRegistrar.php';
 if(isset($_SESSION['usuario'])){
  header("Location: index.php");
 }
@@ -23,13 +25,13 @@ if ($_POST) {
         $archivo = $_FILES["archivo"]["tmp_name"];
         $nombre = pathinfo($_FILES['archivo']['name'], PATHINFO_FILENAME);
         $ext = pathinfo($nombre, PATHINFO_EXTENSION);
-        move_uploaded_file($archivo, 'imagenPerfil/' . $nombre . '.' . $ext);
+        // move_uploaded_file($archivo, 'imagenPerfil/' . $nombre . '.' . $ext);
         $usuarioFinal['image'] = 'imagenPerfil/' . $nombre . '.' . $ext;
       }
     };
     return $usuarioFinal;
   }
-    //enviar datos del usuario a la BD
+    // enviar datos del usuario a la BD
     $jsonDeUsuario = json_encode($usuarioFinal);
     file_put_contents('usuarios.json', $jsonDeUsuario . PHP_EOL, FILE_APPEND);
 

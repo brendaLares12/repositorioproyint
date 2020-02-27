@@ -1,6 +1,12 @@
 <?php
 session_start();
+include_once('pdo.php');
 require_once 'funciones/funciones.php';
+require_once 'funciones/funcLogin.php';
+if(!empty($_POST["remember"])){
+setcookie('email', $user['email'], time()+3600);
+        setcookie('password', $_POST['pass'], time()+3600);
+        setcookie('checked', 'recordarme', time()+3600);}
 
 // if(isset($_SESSION['usuario'])){
 //     header("Location: perfil-usuario.php");
@@ -11,37 +17,64 @@ require_once 'funciones/funciones.php';
 
 $arrayDeErrores = "";
 
-if ($_POST) {
-  $arrayDeErrores = validarRegistracion($_POST);
-  if (count($arrayDeErrores) === 0) {
-    $usuariosGuardados = file_get_contents('usuarios.json');
-    $usuariosGuardados = explode(PHP_EOL, $usuariosGuardados);
-    array_pop($usuariosGuardados);
-    foreach ($usuariosGuardados as $usuario) {
-      $usuarioFinal = json_decode($usuario, true);
-      if ($usuarioFinal['email'] == $_POST['email']) {
-        if (password_verify($_POST['pass'], $usuarioFinal['pass'])) {
-          $_SESSION['usuario'] = $usuarioFinal;
-          if (isset($_POST['recordarme']) && ($_POST['recordarme']) == true) {
-            setcookie('usuario', json_encode($usuarioFinal), time() + 604800);
-          }
-          header('Location: perfil-usuario.php');
-        } else {
-          $errores['pass'] = 'La clave no es correcta';
-        }
-      }
-    }
-  }
-} else {
-  if (isset($_COOKIE['usuario'])) {
-    $_SESSION['usuario'] = json_decode($_COOKIE['usuario'], true);
-  }
-  if (isset($_SESSION['usuario'])) {
-    header('Location: perfil-usuario.php');
-  }
-}
+// if ($_POST) {
+//   $arrayDeErrores = validarRegistracion($_POST);
+//   if (count($arrayDeErrores) === 0) {
+//     $usuariosGuardados = file_get_contents('usuarios.json');
+//     $usuariosGuardados = explode(PHP_EOL, $usuariosGuardados);
+//     array_pop($usuariosGuardados);
+//     foreach ($usuariosGuardados as $usuario) {
+//       $usuarioFinal = json_decode($usuario, true);
+//       if ($usuarioFinal['email'] == $_POST['email']) {
+//         if (password_verify($_POST['pass'], $usuarioFinal['pass'])) {
+//           $_SESSION['usuario'] = $usuarioFinal;
+//           if (isset($_POST['recordarme']) && ($_POST['recordarme']) == true) {
+//             setcookie('usuario', json_encode($usuarioFinal), time() + 604800);
+//           }
+//           header('Location: perfil-usuario.php');
+//         } else {
+//           $errores['pass'] = 'La clave no es correcta';
+//         }
+//       }
+//     }
+//   }
+// } else {
+//   if (isset($_COOKIE['usuario'])) {
+//     $_SESSION['usuario'] = json_decode($_COOKIE['usuario'], true);
+//   }
+//   if (isset($_SESSION['usuario'])) {
+//     header('Location: perfil-usuario.php');
+//   }
+// }
 
-?>
+// $verifica = $db -> query("SELECT * FROM usuarios");               //QUERY PARA LEER LA BD 
+// $consul = $verifica -> fetchAll(PDO::FETCH_ASSOC);
+
+// function verificarMail($usuariosDb, $email, $pass){           //LE PASO LA BD + EL MAIL INGRESADO POR EL USUARIO Y EL PASS
+// foreach ($usuariosDb as $user) {                             //RECORRO LA BD
+//   if ($user['email'] == $email) {                           //SI COINCIDE  MAIL INGRESADO CON EL DE LA BD 
+//     if (password_verify($pass, $user['password'])) {       //VERIFICO PASSWORD
+//        $_SESSION['usuario'] = $user['email'];              //SI ESTA BIEN LO GUARDO EN LA SESSION
+//       if(!empty($_POST["recordarme"])){                   //SI EL BOTON CHECKED ES MARCADO SETEO LAS COOKIES
+//         setcookie('usuario', $_POST['email'], time()+3600);
+//         setcookie('password', $_POST['pass'], time()+3600);
+//         setcookie('checked', 'recordarme', time()+3600);
+//         }
+//         header('Location: index.php');
+//     }
+//     else {$errores['pass'] = 'La clave no es correcta'; }
+//   }
+// }
+//     Echo "El usuario no existe";
+// }
+
+// if ($_POST) {
+//   $password = $_POST['pass'];
+//   $mail = $_POST['email'];
+//   verificarMail($consul, $mail, $password);
+// }
+
+ ?>
 
 
 <!DOCTYPE html>

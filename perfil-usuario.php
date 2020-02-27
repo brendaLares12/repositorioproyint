@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!$_SESSION['usuario']){
+if(!$_SESSION['nombre']){
  header("Location: index.php");
 }
 
@@ -51,8 +51,9 @@ if(!$_SESSION['usuario']){
           <h5 class="card-header">Información del usuario</h5>
           <div class="card-body-info">
             <h5 class="card-title-username">Datos del contacto</h5>
-            <p class="card-text">Nombre de usuario: <?= $_SESSION['usuario']['nombre'] ?></p>
-            <p class="card-text">Email: <?= $_SESSION['usuario']['email'] ?></p>
+            <p class="card-text">Nombre de usuario: <?php echo $_SESSION['nombre'] . " " . $_SESSION['apellido']; ?></p>
+            <p class="card-text">Email: <?php echo $_SESSION['email'] ;?></p>
+                       
             <a href="" class="card-text">Cambiar contraseña</a>
             <br>
             <br>
