@@ -11,7 +11,7 @@ if (isset($_SESSION['usuario']['archivo'])) {
   var_dump($avatar);exit;*/
   ?>
   <img src="img/libro-grande.png" alt="icono">
-  <h1>Libreria Lablic</h1>
+  <h1><a  class= "logo" href="index.php">Libreria Lablic</a></h1>
   <div class="btn-group" role="group">
     <button id="btnGroupDrop1" type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <img src='imagenPerfil/<?= $_SESSION['usuario']['image']; ?>' alt="" style="height:20px; width:15px;">
