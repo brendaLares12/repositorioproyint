@@ -2,15 +2,6 @@
 <header class="fixed-top">
 
 
-  <?php
-  /*if (isset($_SESSION['usuario']['nombre'])) {
-  $nombreUsuario = $_SESSION['usuario']['nombre'];
-}
-if (isset($_SESSION['usuario']['archivo'])) {
-  $avatar = $_SESSION['usuario']['archivo'];
-}
-  var_dump($avatar);exit;*/
-  ?>
   <img src="img/libro-grande.png" alt="icono">
   <h1><a  class= "logo" href="index.php">Libreria Lablic</a></h1>
   <div class="btn-group" role="group">
