@@ -125,7 +125,7 @@
     </main>
     <br>
     <br>
-    <?php require_once 'HeadyFoot/footer.php' ?>
+    @include("layouts.footer");
 
   <!-- </div> -->
   </body>
