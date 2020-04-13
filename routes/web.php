@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+     Route::get('/', function () {
     return view('welcome');
-});
+   });
 
 Auth::routes();
 
@@ -25,3 +25,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/plantilla', function(){
     return view("layouts.libreria");
 });
+
+
+Route::get('/listado-papeleria', 'ProductoController@directory');
+
+Route::get('/listado-papeleria/crear', 'ProductoController@create');
+
+Route::post('/listado-papeleria', 'ProductoController@store');
