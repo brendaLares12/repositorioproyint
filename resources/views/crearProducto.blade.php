@@ -15,7 +15,7 @@
           <li>{{$error}}</li>
       @endforeach
       </ul>
-  
+
     <div class="container">
     <form action="/listado-papeleria" method="post" enctype="multipart/form-data">
         {{csrf_field()}}
@@ -48,7 +48,7 @@
           <select name="" id="categoria_id">
               <option value="">-- Escoja la categoría --</option>
               @foreach ($categorias as $categoria)
-              <option value="" name="categoria_id">{{ $categoria->nombre}}</option>
+              <option value="{{ $categoria->id }}" name="categoria_id">{{ $categoria->nombre}}</option>
               @endforeach
             </select>
       </div>

@@ -10,11 +10,7 @@ class Categoria extends Model
     public $primaryKey = "id";
     //public $timestamps = "";
    public $guarded = [];
-
-   public function nombreCategoria() {
-      return $this->nombre;
-  }
-
+   
    public function productos() {
          return $this->hasMany("App\Producto", "categoria_id");
    }
