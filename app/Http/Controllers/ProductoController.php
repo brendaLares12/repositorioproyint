@@ -10,14 +10,10 @@ use Illuminate\Http\Request;
 class ProductoController extends Controller {
 
 
-        public function index() {
+        public function directory() {
             $productos = Producto::all();
-            return view("listadoPapeleria", compact('productos'));
+            return view("crearProducto", compact("productos"));
         }
-
-                public function directory() {
-                    return view('crearProducto');
-                }
 
             public function  create() {
                 $categorias = Categoria::all();
@@ -27,7 +23,7 @@ class ProductoController extends Controller {
 
 
             public function store(Request $form) {
-            dd($form->all());
+            //dd($form->all());
                 $reglas = [
                     'nombre' => 'required|string',
                     'imagen' => 'required|file',
@@ -60,8 +56,38 @@ class ProductoController extends Controller {
 
                         $producto->save();
 
-                        return redirect('/listado-papeleria')->with(compact('producto'));
+                        return redirect('/producto/crear')->with(compact('producto'));
         }
+
+
+                public function show($id) {
+                  $producto = Producto::find($id);
+                   return view('producto', compact('producto'));
+              }
+
+        public function edit($id) {
+          $producto = Producto::find($id);
+           return view('editarProducto', compact("producto"));
+      }
+
+
+        public function update(Request $form) {
+         $producto = Producto::find($form["id"]);
+          $producto->nombre = $form["nombre"];
+          $producto->descripcion = $form["descripcion"];
+          $producto->precio = $form["precio"];
+
+           $producto->save();
+         return redirect('/producto/{id}')->with(compact("producto"));
+       }
+
+                  public function destroy(Request $form) {
+                     $producto = Actor::find($form['id']);
+                     $producto->delete();
+                    return redirect('/producto');
+        }
+
+
 
 
 }

@@ -27,8 +27,23 @@ Route::get('/plantilla', function(){
 });
 
 
-Route::get('/listado-papeleria', 'ProductoController@directory');
+//MUESTRA UNA LISTA DE PRODUCTOS
+Route::get('/productos', 'ProductoController@directory');
 
-Route::get('/listado-papeleria/crear', 'ProductoController@create');
+//MUESTRA LA VISTA CON EL FORMULARIO PARA CREAR EL PRODUCTO
+Route::get('/producto', 'ProductoController@create');
 
-Route::post('/listado-papeleria', 'ProductoController@store');
+//CREA Y ALMACENA UN PRODUCTO DENTRO DE LA BD
+Route::post('/producto/crear', 'ProductoController@store');
+
+//MUESTRA UN PRODUCTO ESPECÍFICO (POR SU ID)
+Route::get('/producto/{id}', 'ProductoController@show');
+
+//MUESTRA EL FORMULARIO PARA EDITAR UN PRODUCTO
+Route::get('/producto/{id}/edit', 'ProductoController@edit');
+
+//ACTUALIZA EL PRODUCTO EN LA BD (SE LO BUSCA POR SU ID)
+Route::put('/producto/{id}', 'ProductoController@update');
+
+//ELIMINA UN PRODUCTO ESPECÍFICO EN LA BD
+Route::delete('/producto/{id}', 'ProductoController@destroy');

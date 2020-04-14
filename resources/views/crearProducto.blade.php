@@ -5,8 +5,6 @@
 <br>
 <br>
 <br>
-<br>
-<br>
 <div>
     <h1>Agregado de productos: </h1>
 
@@ -16,39 +14,40 @@
       @endforeach
       </ul>
 
-    <div class="container">
-    <form action="/listado-papeleria" method="post" enctype="multipart/form-data">
+    <div class="contenedor-form">
+    <form action="/producto/crear" method="post" enctype="multipart/form-data">
         {{csrf_field()}}
     <div>
-        <label for="nombre">Nombre: </label>
+        <strong><label for="nombre">Nombre: </label></strong>
         <br>
         <input type="text" name="nombre" value="{{old("nombre")}}">
     </div>
     <br>
      <div>
-     <label for="">Descripción: </label>
+        <strong><label for="nombre">Nombre: </label></strong>
+      <strong><label for="">Descripción: </label></strong>
      </div>
     <div>
      <textarea id="descripcion" name="descripcion" cols="15" rows="2" placeholder="Escriba el contenido"></textarea>
     </div>
     <br>
     <div>
-        <label for="precio">Precio: </label>
+      <strong><label for="precio">Precio: </label></strong>
         <br>
         <input type="number" name="precio" value="">
        </div>
        <br>
     <div>
-        <label for="imagen">Imagen: </label>
+      <strong><label for="imagen">Imagen: </label></strong>
         <input type="file" name="imagen" id="">
       </div>
       <br>
       <div>
-        <label for="">Categoría: </label>
-          <select name="" id="categoria_id">
-              <option value="">-- Escoja la categoría --</option>
-              @foreach ($categorias as $categoria)
-              <option value="{{ $categoria->id }}" name="categoria_id">{{ $categoria->nombre}}</option>
+        <strong><label for="">Categoría: </label></strong>
+        <select name="categoria_id" id="categoria_id">
+          <option value="">-- Escoja la categoría --</option>
+          @foreach ($categorias as $categoria)
+          <option value="{{ $categoria->id }}">{{ $categoria->nombre}}</option>
               @endforeach
             </select>
       </div>
