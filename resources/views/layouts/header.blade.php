@@ -18,7 +18,7 @@
   <body>
 <header class="fixed-top">
     <img src="img/libro-grande.png" alt="icono">
-    <h1><a  class= "logo" href="index.php">Libreria Lablic</a></h1>
+    <h1><a  class= "logo" href="/plantilla">Libreria Lablic</a></h1>
     <div class="btn-group" role="group">
       <button id="btnGroupDrop1" type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <img src='<?= "foto" ?>' alt="" style="height:20px; width:15px;">
@@ -43,7 +43,7 @@
     <button onclick="location.href='carrito.php'" type="button" class="btn btn-transparent btn-compra"><i class="fas fa-shopping-cart"></i></button>
   
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <a class="navbar-brand" href="index.php">Home</a>
+      <a class="navbar-brand" href="/plantilla">Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -61,7 +61,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Papelería</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="listado-productos.php#Utiles">Útiles Escolares</a>
+              <a class="dropdown-item" href="/productos">Útiles Escolares</a>
               <a class="dropdown-item" href="listado-productos.php#LibyAg">Libretas y Agendas</a>
               <a class="dropdown-item" href="listado-productos.php#Tarj-Kraft">Tarjetas y Bolsas kraft</a>
               <div class="dropdown-divider"></div>

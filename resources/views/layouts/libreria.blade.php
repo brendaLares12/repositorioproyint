@@ -46,7 +46,7 @@
           <br>
 
 <section>
-  <h2>Literatura</h2>
+  <h2>Libros</h2>
         <div class="card-deck">
           <div class="card">
             <img src="img/clasicos.jpg" class="card-img-top" alt="..." height="220px">

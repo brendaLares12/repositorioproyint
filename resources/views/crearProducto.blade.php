@@ -14,6 +14,7 @@
       @endforeach
       </ul>
 
+  <div class="container">
     <div class="contenedor-form">
     <form action="/producto/crear" method="post" enctype="multipart/form-data">
         {{csrf_field()}}
@@ -24,11 +25,10 @@
     </div>
     <br>
      <div>
-        <strong><label for="nombre">Nombre: </label></strong>
       <strong><label for="">Descripción: </label></strong>
      </div>
     <div>
-     <textarea id="descripcion" name="descripcion" cols="15" rows="2" placeholder="Escriba el contenido"></textarea>
+     <textarea id="descripcion" name="descripcion" placeholder="Escriba el contenido.."></textarea>
     </div>
     <br>
     <div>
@@ -54,5 +54,6 @@
       <br>
     <input type="submit" value="Agregar producto">
  </form>
+</div>
 </div>
  @include("layouts.footer")

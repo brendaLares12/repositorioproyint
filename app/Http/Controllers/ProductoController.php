@@ -12,7 +12,7 @@ class ProductoController extends Controller {
 
         public function directory() {
             $productos = Producto::all();
-            return view("crearProducto", compact("productos"));
+            return view("listadoPapeleria", compact("productos"));
         }
 
             public function  create() {
@@ -44,7 +44,7 @@ class ProductoController extends Controller {
                         $producto = new Producto();
 
 
-                        $ruta = $form->file('imagen')->store('public');
+                        $ruta = $form->file('imagen')->store('public');   
 
                         $nombreImagen = basename($ruta);
 

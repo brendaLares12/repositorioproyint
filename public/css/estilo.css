@@ -226,6 +226,11 @@ h6{
   border-radius: 20px;
 }
 
+textarea {
+  overflow: auto;
+  resize: both;
+}
+
 /*RECUPERAR-CONTRASEÑA*/
 
 .container-form {

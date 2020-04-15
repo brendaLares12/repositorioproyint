@@ -31,7 +31,7 @@ Route::get('/plantilla', function(){
 Route::get('/productos', 'ProductoController@directory');
 
 //MUESTRA LA VISTA CON EL FORMULARIO PARA CREAR EL PRODUCTO
-Route::get('/producto', 'ProductoController@create');
+Route::get('/producto/crear', 'ProductoController@create');
 
 //CREA Y ALMACENA UN PRODUCTO DENTRO DE LA BD
 Route::post('/producto/crear', 'ProductoController@store');
