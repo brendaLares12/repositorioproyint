@@ -4,9 +4,10 @@
 }
 
 body{
-  background-color: whitesmoke;
+  background-color: cornflowerblue;
   font-family:'Muli',sans-serif;
   margin: 0 auto;
+
 }
 .container{
   width: 100%;
@@ -62,9 +63,22 @@ color: black;
 .card{
 box-shadow: 0 8px 15px lightgray;
 border-radius: 10px;
+transition:opacity .5s
 }
 
+/*IMG*/
+.card-img-top:hover{
+  -webkit-transform: scale(1.09, 1.09);
+  -webkit-transition-timin-function: ease-out;
+  -webkit-transition-duration: 500ms;
+  -moz-transform: scale(1.09, 1.09);
+  -moz-transition-timin-function: ease-out;
+  -moz-transition-duration: 500ms;
+}
 
+.image {
+  border-radius: 9px;
+}
 /*ventana usuario*/
 .vent-user{
   position: absolute;
@@ -96,6 +110,13 @@ border-radius: 10px;
   bottom: -20px;
 }
 
+.card{
+  transition-property: opacity;
+  transition-duration: 0.5s;
+transition-timing-function: ease;
+transition-delay: 0s;
+}
+
 .card-text{
   text-align: center;
 }
@@ -109,6 +130,11 @@ border-radius: 10px;
 main{
   margin: 17px;
   justify-content: center;
+}
+
+section {
+  margin-left: 70px;
+  margin-right: 70px;
 }
 /*diseño carrusel*/
 
@@ -171,6 +197,19 @@ h6{
   text-align: center;
   margin: 2px;
 }
+
+.vertical-nav{
+  width: 192px;
+}
+
+.list{
+  text-align: left;
+}
+
+table{
+float: left;
+}
+
 /*estilo de formularios*/
 .contenedor-form{
   margin: 15px;
@@ -201,6 +240,11 @@ h6{
   border-color: gold;
   width: 100%;
   border-radius: 20px;
+}
+
+textarea {
+  overflow: auto;
+  resize: both;
 }
 
 /*RECUPERAR-CONTRASEÑA*/
@@ -265,7 +309,6 @@ line-height: 40px;
 
 /*PERFIL-USUARIO*/
 .flex-column {
-  border:1px solid gray;
   background-color: white;
   font-family: "Muli",sans-serif;
 }
