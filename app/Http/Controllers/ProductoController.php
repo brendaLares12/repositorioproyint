@@ -29,6 +29,7 @@ class ProductoController extends Controller {
                     'imagen' => 'required|file',
                     'descripcion' =>'required|string|max:100',
                     'precio' => 'required|integer',
+                    'stock' => 'required|integer',
                     'categoria_id' => 'required|integer'
                     ];
 
@@ -44,7 +45,7 @@ class ProductoController extends Controller {
                         $producto = new Producto();
 
 
-                        $ruta = $form->file('imagen')->store('public');   
+                        $ruta = $form->file('imagen')->store('public');
 
                         $nombreImagen = basename($ruta);
 
@@ -52,6 +53,7 @@ class ProductoController extends Controller {
                         $producto->nombre = $form['nombre'];
                         $producto->descripcion = $form['descripcion'];
                         $producto->precio = $form['precio'];
+                        $producto->stock = $form['stock'];
                         $producto->categoria_id = $form['categoria_id'];
 
                         $producto->save();
@@ -67,15 +69,15 @@ class ProductoController extends Controller {
 
         public function edit($id) {
           $producto = Producto::find($id);
-           return view('editarProducto', compact("producto"));
+           return view('editarProducto', compact('producto'));
       }
 
-
         public function update(Request $form) {
-         $producto = Producto::find($form["id"]);
+          $producto = Producto::find($form["id"]);
           $producto->nombre = $form["nombre"];
           $producto->descripcion = $form["descripcion"];
           $producto->precio = $form["precio"];
+          $producto->stock = $form["stock"];
 
            $producto->save();
          return redirect('/producto/{id}')->with(compact("producto"));

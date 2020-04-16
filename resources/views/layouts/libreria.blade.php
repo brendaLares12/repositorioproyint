@@ -1,5 +1,5 @@
-<!-- <div class="container"> --> 
-      @include("layouts.header")
+<!-- <div class="container"> -->
+      @extends("layouts.headyfoot")
 
     <main style="margin-top:200px" >
         <div id="carouselExampleIndicators" class="carousel slide d-none d-md-block" data-ride="carousel">
@@ -105,4 +105,3 @@
             </div>
             </section>
     </main>
-    @include("layouts.footer")

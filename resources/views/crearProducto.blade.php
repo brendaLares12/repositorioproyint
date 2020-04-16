@@ -1,12 +1,16 @@
-@include("layouts.header")
+@extends("layouts.headyfoot")
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
+<br>
+<br>
+<section>
 <div>
-    <h1>Agregado de productos: </h1>
+  <h2>Agregar productos: </h2>
+ </div>
 
     <ul style="color:red" class="errores">
       @foreach ($errors->all() as $error)
@@ -14,7 +18,7 @@
       @endforeach
       </ul>
 
-  <div class="container">
+  <div class="container col-md-6">
     <div class="contenedor-form">
     <form action="/producto/crear" method="post" enctype="multipart/form-data">
         {{csrf_field()}}
@@ -34,9 +38,15 @@
     <div>
       <strong><label for="precio">Precio: </label></strong>
         <br>
-        <input type="number" name="precio" value="{{old("precio")}}">
+        <input type="number" name="precio" step="0.01" value="{{old("precio")}}">
        </div>
        <br>
+       <div>
+         <strong><label for="stock">Stock: </label></strong>
+           <br>
+           <input type="number" name="stock" value="">
+          </div>
+          <br>
     <div>
       <strong><label for="imagen">Imagen: </label></strong>
         <input type="file" name="imagen" id="">
@@ -56,4 +66,4 @@
  </form>
 </div>
 </div>
- @include("layouts.footer")
+</section>

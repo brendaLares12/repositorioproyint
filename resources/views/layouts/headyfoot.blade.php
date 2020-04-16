@@ -17,7 +17,7 @@
   </head>
   <body>
 <header class="fixed-top">
-    <img src="img/libro-grande.png" alt="icono">
+    <img src="/storage/libro-grande.png" alt="icono">
     <h1><a  class= "logo" href="/plantilla">Libreria Lablic</a></h1>
     <div class="btn-group" role="group">
       <button id="btnGroupDrop1" type="button" class="btn btn-transparent dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -28,7 +28,7 @@
           <a class="dropdown-item" href="login.php">Ingresar</a>
           <a class="dropdown-item" href="registrar.php">Registrar</a>
         <?php endif; ?>
-  
+
         @if (Auth::check())
           <a class="dropdown-item" href="perfil-usuario.php">
             <span class="rounded-circle border border-primary" style="background-image: url('imagenPerfil/5df98608d726c.png'); background-size: cover;  width:42px; height: 42px;"></span>
@@ -39,15 +39,15 @@
         @endif
       </div>
     </div>
-  
+
     <button onclick="location.href='carrito.php'" type="button" class="btn btn-transparent btn-compra"><i class="fas fa-shopping-cart"></i></button>
-  
+
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <a class="navbar-brand" href="/plantilla">Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
+
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item dropdown">
@@ -66,7 +66,7 @@
               <a class="dropdown-item" href="listado-productos.php#Tarj-Kraft">Tarjetas y Bolsas kraft</a>
               <div class="dropdown-divider"></div>
             </div>
-  
+
           <li class="nav-item">
             <a class="nav-link" href="faq.php">F.A.Q</a>
           </li>
@@ -87,3 +87,26 @@
       </div>
     </nav>
   </header>
+
+
+<footer>
+    <div class="footer">
+        <div class="row">
+          <div class="col-sm-6 ubicacion">
+            <h4>Ubicación</h4>
+            <p>Mitre 100</p>
+            <p>Rosario,Santa Fe</p>
+            <p> © 2019-2020 Todos los derechos reservados</p>
+          </div>
+          <div class="col-sm-6">
+            <h4>Encontranos en nuestras redes</h4>
+            <div class="sociales">
+              <button type="button" name="button"><i class="fab fa-linkedin"></i></button>
+              <button type="button" name="button"><i class="fab fa-instagram"></i></button>
+              <button type="button" name="button"><i class="fab fa-facebook"></i></button>
+              <button type="button" name="button"><i class="fab fa-twitter"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+</footer>
