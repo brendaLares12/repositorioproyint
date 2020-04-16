@@ -28,13 +28,13 @@
       <strong><label for="">Descripción: </label></strong>
      </div>
     <div>
-     <textarea id="descripcion" name="descripcion" placeholder="Escriba el contenido.."></textarea>
+     <textarea id="descripcion" name="descripcion" value="{{old("descripcion")}}" placeholder="Escriba el contenido.."></textarea>
     </div>
     <br>
     <div>
       <strong><label for="precio">Precio: </label></strong>
         <br>
-        <input type="number" name="precio" value="">
+        <input type="number" name="precio" value="{{old("precio")}}">
        </div>
        <br>
     <div>

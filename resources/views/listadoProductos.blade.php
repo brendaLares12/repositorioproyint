@@ -3,7 +3,7 @@
   
     <div class="listado-productos">
      
-        <h5 class="detalle-libros"><span class="detalle-libros1">Listado de productos de papelería</span></h5>
+        <h5 class="detalle-libros"><span class="detalle-libros1">Listado de productos</span></h5>
         
         <section>
         <div class="row justify-content-around">

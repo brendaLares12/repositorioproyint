@@ -12,7 +12,7 @@ class ProductoController extends Controller {
 
         public function directory() {
             $productos = Producto::all();
-            return view("listadoPapeleria", compact("productos"));
+            return view("listadoProductos", compact("productos"));
         }
 
             public function  create() {
