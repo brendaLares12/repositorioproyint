@@ -4,7 +4,7 @@
 }
 
 body{
-  background-color: whitesmoke;
+  background-color: cornflowerblue;
   font-family:'Muli',sans-serif;
   margin: 0 auto;
 
@@ -76,6 +76,9 @@ transition:opacity .5s
   -moz-transition-duration: 500ms;
 }
 
+.image {
+  border-radius: 9px;
+}
 /*ventana usuario*/
 .vent-user{
   position: absolute;
@@ -194,6 +197,19 @@ h6{
   text-align: center;
   margin: 2px;
 }
+
+.vertical-nav{
+  width: 192px;
+}
+
+.list{
+  text-align: left;
+}
+
+table{
+float: left;
+}
+
 /*estilo de formularios*/
 .contenedor-form{
   margin: 15px;
@@ -293,7 +309,6 @@ line-height: 40px;
 
 /*PERFIL-USUARIO*/
 .flex-column {
-  border:1px solid gray;
   background-color: white;
   font-family: "Muli",sans-serif;
 }
