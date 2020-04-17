@@ -44,31 +44,30 @@
     </div>
     <br>
     <div>
-<<<<<<< HEAD
       <strong><label for="precio">Precio: </label></strong>
-=======
+
       <strong><label for="precio">{{"Precio"}}: </label></strong>
->>>>>>> cabf78411e319e47d07bbb32846d896f4fff234b
+
         <br>
         <input type="number" name="precio" step="0.01" value="{{old("precio")}}">
        </div>
        <br>
        <div>
-<<<<<<< HEAD
+
          <strong><label for="stock">Stock: </label></strong>
-=======
+
          <strong><label for="stock">{{"Stock"}}: </label></strong>
->>>>>>> cabf78411e319e47d07bbb32846d896f4fff234b
+
            <br>
            <input type="number" name="stock" value="">
           </div>
           <br>
     <div>
-<<<<<<< HEAD
+
       <strong><label for="imagen">Imagen: </label></strong>
-=======
+
       <strong><label for="imagen">{{"Imagen"}}: </label></strong>
->>>>>>> cabf78411e319e47d07bbb32846d896f4fff234b
+
         <input type="file" name="imagen" id="">
       </div>
       <br>

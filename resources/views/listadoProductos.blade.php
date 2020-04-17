@@ -1,12 +1,12 @@
 @extends("layouts.headyfoot")
-<<<<<<< HEAD
+
 <main style="margin-top:200px">
 
     <div class="listado-productos">
 
         <h5 class="detalle-libros"><span class="detalle-libros1">Listado de productos</span></h5>
 
-=======
+
 <main class="main-products" style="margin-top:200px">
 
     <div class="listado-productos">
@@ -36,21 +36,21 @@
          <td>Tarjetas personalizadas</td>
        </tr>
       </table>
->>>>>>> cabf78411e319e47d07bbb32846d896f4fff234b
+
         <section>
         <div class="row justify-content-around">
           @foreach ($productos as $producto)
           <div class="col-sm-9 col-md-6 col-lg-4">
           <div class="card" style="width:250px" align="center">
-<<<<<<< HEAD
+
             <img src="storage/{{$producto->imagen}}" alt="" width="300px" height="250px">
-=======
+
             <table>
             <tr>
             <img class="image" src="storage/{{$producto->imagen}}" alt="" width="250px" height="250px">
           </tr>
         </table>
->>>>>>> cabf78411e319e47d07bbb32846d896f4fff234b
+
             <div class="card-body">
               <h4 class="card-title" ><strong>{{$producto->nombre}}</strong></h4>
               <p class="card-text">${{$producto->precio}}</p>
@@ -60,11 +60,8 @@
           @endforeach
         </section>
         </div>
-<<<<<<< HEAD
+
     </div>
-=======
+
       </div>
-
->>>>>>> cabf78411e319e47d07bbb32846d896f4fff234b
-
 </main>
