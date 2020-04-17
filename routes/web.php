@@ -37,7 +37,7 @@ Route::get('/producto/crear', 'ProductoController@create');
 Route::post('/producto/crear', 'ProductoController@store');
 
 //MUESTRA UN PRODUCTO ESPECÍFICO (POR SU ID)
-Route::get('/producto/{id}', 'ProductoController@show');
+Route::put('/producto/{id}', 'ProductoController@show');
 
 //MUESTRA EL FORMULARIO PARA EDITAR UN PRODUCTO
 Route::put('/producto/{id}/editar', 'ProductoController@edit');
