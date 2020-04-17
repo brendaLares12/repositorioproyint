@@ -40,7 +40,7 @@ Route::post('/producto/crear', 'ProductoController@store');
 Route::get('/producto/{id}', 'ProductoController@show');
 
 //MUESTRA EL FORMULARIO PARA EDITAR UN PRODUCTO
-Route::get('/producto/{id}/editar', 'ProductoController@edit');
+Route::put('/producto/{id}/editar', 'ProductoController@edit');
 
 //ACTUALIZA EL PRODUCTO EN LA BD (SE LO BUSCA POR SU ID)
 Route::put('/producto/{id}', 'ProductoController@update');

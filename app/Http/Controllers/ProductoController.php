@@ -69,7 +69,8 @@ class ProductoController extends Controller {
 
         public function edit($id) {
           $producto = Producto::find($id);
-           return view('editarProducto', compact('producto'));
+          $categorias = Categoria::all();
+           return view('editarProducto', compact('producto', 'categorias'));
       }
 
         public function update(Request $form) {
@@ -84,7 +85,7 @@ class ProductoController extends Controller {
        }
 
                   public function destroy(Request $form) {
-                     $producto = Actor::find($form['id']);
+                     $producto = Producto::find($form['id']);
                      $producto->delete();
                     return redirect('/producto');
         }

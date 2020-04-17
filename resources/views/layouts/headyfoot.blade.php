@@ -63,7 +63,7 @@
             <div class="dropdown-menu">
               <a class="dropdown-item" href="/productos">Útiles Escolares</a>
               <a class="dropdown-item" href="listado-productos.php#LibyAg">Libretas y Agendas</a>
-              <a class="dropdown-item" href="listado-productos.php#Tarj-Kraft">Tarjetas y Bolsas kraft</a>
+              <a class="dropdown-item" href="listado-productos.php#Tarj-Kraft">Tarjetas personalizadas</a>
               <div class="dropdown-divider"></div>
             </div>
 

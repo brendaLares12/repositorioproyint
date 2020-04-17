@@ -11,9 +11,9 @@
 <div class="container col-md-6">
   <h2>Editar producto</h2>
   <div class="contenedor-form">
-  <form action="/producto/{id}" method="post" enctype="multipart/form-data">
+  <form action="/producto/{{$productos->id}}" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="_method" value="PUT">
       {{csrf_field()}}
-      {{method_field('PATCH')}}
   <div>
       <strong><label for="nombre">{{"Nombre"}}: </label></strong>
       <br>
@@ -24,7 +24,7 @@
     <strong><label for="">{{"Descripción"}}: </label></strong>
    </div>
   <div>
-   <textarea id="descripcion" name="descripcion" value="{{$producto->descripcion}}"></textarea>
+   <textarea id="descripcion" name="descripcion">{{$producto->descripcion}}</textarea>
   </div>
   <br>
   <div>
@@ -42,6 +42,16 @@
   <div>
     <strong><label for="imagen">{{"Imagen"}}: </label></strong>
       <input type="file" name="imagen" id="">
+    </div>
+    <br>
+    <div>
+      <strong><label for="">Categoría: </label></strong>
+      <select name="categoria_id" id="categoria_id">
+        <option value="">-- Escoja la categoría --</option>
+        @foreach ($categorias as $categoria)
+        <option value="{{ $categoria->id }}">{{ $categoria->nombre}}</option>
+            @endforeach
+          </select>
     </div>
     <br>
   <input type="submit" value="Editar producto">

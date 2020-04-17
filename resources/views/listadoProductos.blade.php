@@ -25,7 +25,7 @@
          <td>Libretas y Agendas</td>
        </tr>
        <tr>
-         <td>Tarjetas y Bolsas kraft</td>
+         <td>Tarjetas personalizadas</td>
        </tr>
       </table>
         <section>

@@ -97,8 +97,8 @@
               <div class="card">
                 <img src="img/tarjetas.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                <h5 class="card-title">Tarjetas y Bolsas kraft</h5>
-                <p class="card-text">Tarjetas y bolsas  para personalizar tus regalos</p>
+                <h5 class="card-title">Tarjetas personalizadas</h5>
+                <p class="card-text">Tarjetas personalizadas de presentación y para regalar.</p>
                 <div class = "button-link"><a href="listado-productos.php#Tarj-Kraft" class="btn btn-primary">Ver productos</a></div>
               </div>
               </div>
