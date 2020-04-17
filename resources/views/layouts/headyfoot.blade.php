@@ -25,8 +25,8 @@
       </button>
       <div class="vent-user dropdown-menu " style="position: absolute;will-change: transform;top: 0px;left: 0px;transform: translate3d(-200px, 38px, 0px);text-align-last: center;" aria-labelledby="btnGroupDrop1">
         <?php if (!isset($_SESSION['nombre'])) : ?>
-          <a class="dropdown-item" href="login.php">Ingresar</a>
-          <a class="dropdown-item" href="registrar.php">Registrar</a>
+          <a class="dropdown-item" href="/login">Ingresar</a>
+          <a class="dropdown-item" href="/register">Registrar</a>
         <?php endif; ?>
 
         @if (Auth::check())

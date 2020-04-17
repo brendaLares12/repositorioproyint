@@ -34,13 +34,14 @@ Route::get('/productos', 'ProductoController@directory');
 Route::get('/producto/crear', 'ProductoController@create');
 
 //CREA Y ALMACENA UN PRODUCTO DENTRO DE LA BD
-Route::post('/producto/crear', 'ProductoController@store');
+Route::put('/producto/crear', 'ProductoController@store');
 
 //MUESTRA UN PRODUCTO ESPECÍFICO (POR SU ID)
-Route::put('/producto/{id}', 'ProductoController@show');
+
+Route::get('/producto/{id}', 'ProductoController@show');
 
 //MUESTRA EL FORMULARIO PARA EDITAR UN PRODUCTO
-Route::put('/producto/{id}/editar', 'ProductoController@edit');
+Route::get('/producto/{id}/editar', 'ProductoController@edit');
 
 //ACTUALIZA EL PRODUCTO EN LA BD (SE LO BUSCA POR SU ID)
 Route::put('/producto/{id}', 'ProductoController@update');

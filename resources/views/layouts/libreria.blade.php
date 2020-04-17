@@ -83,7 +83,7 @@
                 <div class="card-body">
                 <h5 class="card-title">Útiles Escolares</h5>
                 <p class="card-text">Tenemos todo lo necesario para el comienzo de clases.</p>
-                <div class = "button-link"><a href="listado-productos.php#Utiles" class="btn btn-primary">Ver productos</a></div>
+                <div class = "button-link"><a class="categoria" href="listado-productos.php#Utiles" class="btn btn-primary">Ver productos</a></div>
                 </div>
               </div>
               <div class="card">

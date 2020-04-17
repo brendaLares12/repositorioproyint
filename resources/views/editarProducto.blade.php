@@ -9,24 +9,21 @@
 <br>
 
 <div class="container col-md-6">
-  <h2>Editar producto</h2>
-  <div class="contenedor-form">
 
-  <form action="/producto/{$producto->id}" method="post" enctype="multipart/form-data">
+ 
+  <h2>Editar producto</h2>
+ 
+  <div class="contenedor-form">
+  <form action="/producto/{{$producto->id}}" method="post" enctype="multipart/form-data">
       {{csrf_field()}}
+      {{ method_field('PUT') }}
       <strong><label for="nombre">{{"Nombre"}}: </label></strong>
 
       <br>
       <input type="text" name="nombre" value="{{$producto->nombre}}">
-  </div>
   <br>
-  
-  <div>
-   <textarea id="descripcion" name="descripcion" value="{{$producto->descripcion}}" placeholder="Escriba el contenido.."></textarea>
-  </div>
   <br>
   <div>
-  
     <strong><label for="">{{"Descripción"}}: </label></strong>
    </div>
   <div>
@@ -63,6 +60,6 @@
     </div>
     <br>
   <input type="submit" value="Editar producto">
-</form>
-</div>
+  </form>
+  </div>
 </div>

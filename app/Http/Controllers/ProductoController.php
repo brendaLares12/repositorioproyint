@@ -64,10 +64,8 @@ class ProductoController extends Controller {
 
                 public function show($id) {
                   $producto = Producto::find($id);
-
-                   return view('producto', compact('producto'));
-
-                   return view('detalleProducto', compact('producto'));
+                  $productos = Producto::all();
+                   return view('detalleProducto', compact('producto', 'productos'));
 
               }
 
@@ -80,6 +78,7 @@ class ProductoController extends Controller {
         public function update(Request $form) {
           $producto = Producto::find($form["id"]);
           $producto->nombre = $form["nombre"];
+          $producto->imagen = $form["imagen"];
           $producto->descripcion = $form["descripcion"];
           $producto->precio = $form["precio"];
           $producto->stock = $form["stock"];
@@ -88,10 +87,10 @@ class ProductoController extends Controller {
          return redirect('/producto/{id}')->with(compact("producto"));
        }
 
-                  public function destroy(Request $form) {
-                     $producto = Producto::find($form['id']);
+                  public function destroy($id) {
+                     $producto = Producto::find($id);
                      $producto->delete();
-                    return redirect('/producto');
+                    return redirect('/productos');
         }
 
 
