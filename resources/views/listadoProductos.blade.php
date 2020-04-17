@@ -2,14 +2,11 @@
 
 <main style="margin-top:200px">
 
-    <div class="listado-productos">
-
-        <h5 class="detalle-libros"><span class="detalle-libros1">Listado de productos</span></h5>
-
 
 <main class="main-products" style="margin-top:200px">
 
     <div class="listado-productos">
+      
     <h5 class="detalle-libros"><span class="detalle-libros1">Listado de productos</span></h5>
 
   <div class="">
@@ -42,8 +39,6 @@
           @foreach ($productos as $producto)
           <div class="col-sm-9 col-md-6 col-lg-4">
           <div class="card" style="width:250px" align="center">
-
-            <img src="storage/{{$producto->imagen}}" alt="" width="300px" height="250px">
 
             <table>
             <tr>
