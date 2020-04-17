@@ -64,7 +64,11 @@ class ProductoController extends Controller {
 
                 public function show($id) {
                   $producto = Producto::find($id);
+<<<<<<< HEAD
+                   return view('producto', compact('producto'));
+=======
                    return view('detalleProducto', compact('producto'));
+>>>>>>> cabf78411e319e47d07bbb32846d896f4fff234b
               }
 
         public function edit($id) {
