@@ -49,5 +49,5 @@ Route::post('/producto/{id}', 'ProductoController@update');
 //ELIMINA UN PRODUCTO ESPECÍFICO EN LA BD
 Route::delete('/producto/{id}', 'ProductoController@destroy');
 
-//Ruta de la vista que muestra la lista de literatura universal
-Route::get()
+//Ruta de vista de literatura universal
+Route::get('/litUniversal', 'ProductoController@litUniversal');

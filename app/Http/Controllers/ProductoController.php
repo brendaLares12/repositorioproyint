@@ -9,20 +9,20 @@ use Illuminate\Http\Request;
 
 class ProductoController extends Controller {
 
-
+      //Muestra listado de productos
         public function directory() {
             $productos = Producto::paginate(6);
             $categorias = Categoria::all();
             return view('listadoProductos', compact('productos', 'categorias'));
         }
 
+        //Crea producto
             public function  create() {
                 $categorias = Categoria::all();
                 return view('crearProducto', compact('categorias'));
             }
 
-
-
+        //Guarda producto creado
             public function store(Request $form) {
             //dd($form->all());
                 $reglas = [
@@ -44,8 +44,7 @@ class ProductoController extends Controller {
                 $this->validate($form, $reglas, $errors);
 
                         $producto = new Producto();
-
-
+                        
                         $ruta = $form->file('imagen')->store('public');
 
                         $nombreImagen = basename($ruta);
@@ -62,19 +61,25 @@ class ProductoController extends Controller {
                         return redirect('/producto/crear')->with(compact('producto'));
         }
 
-          //Muestra el detalle de un producto
+        //Muestra  detalle de producto
                 public function show($id) {
                   $producto = Producto::find($id);
                    return view('detalleProducto', compact('producto'));
               }
 
-                  
+        //Muestra la vista de literatura universal
+              public function litUniversal() {
+                $productos = Producto::where('id', '>=', '20', 'and', 'id', '<=', '22')->get();
+                 return view('literaturaUniversal', compact('productos'));
+            }
+
+        //Modifica producto      
                 public function edit($id) {
                   $producto = Producto::find($id);
                   $categorias = Categoria::all();
                   return view('editarProducto', compact('producto', 'categorias'));
               }
-
+        //Guarda modificación de producto
                  public function update(Request $form) {
                   $producto = Producto::find($form["id"]);
                   $producto->nombre = $form["nombre"];
@@ -88,6 +93,7 @@ class ProductoController extends Controller {
                 return redirect('/producto/{id}')->with(compact("producto"));
                }
 
+        //Elimina producto
                   public function destroy($id) {
                      $producto = Producto::find($id);
                      $producto->delete();

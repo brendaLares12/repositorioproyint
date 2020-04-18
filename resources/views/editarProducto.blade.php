@@ -1,4 +1,4 @@
-@extends("layouts.headyfoot")
+@extends("layouts.header")
 <br>
 <br>
 <br>
@@ -63,3 +63,4 @@
   </form>
   </div>
 </div>
+@extends("layouts.footer")
