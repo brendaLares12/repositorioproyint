@@ -15,7 +15,8 @@ body{
 /*ESTILO EN DEGRADE DE LA PAGINA*/
 header{
   text-align: center;
-	background: radial-gradient(50% 50%,#fff, pink);
+  background: radial-gradient(50% 50%,#fff, pink);
+
 }
 /*tamaño del icono*/
 header img{
@@ -38,10 +39,10 @@ color: black;
 }
 
 
-
 .nav-link{
   color:black;
   font-family:'Muli', serif;
+  
 }
 
 .btn-outline-success{

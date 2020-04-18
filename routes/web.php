@@ -34,7 +34,7 @@ Route::get('/productos', 'ProductoController@directory');
 Route::get('/producto/crear', 'ProductoController@create');
 
 //CREA Y ALMACENA UN PRODUCTO DENTRO DE LA BD
-Route::put('/producto/crear', 'ProductoController@store');
+Route::post('/producto/crear', 'ProductoController@store');
 
 //MUESTRA UN PRODUCTO ESPECÍFICO (POR SU ID)
 
@@ -44,7 +44,10 @@ Route::get('/producto/{id}', 'ProductoController@show');
 Route::get('/producto/{id}/editar', 'ProductoController@edit');
 
 //ACTUALIZA EL PRODUCTO EN LA BD (SE LO BUSCA POR SU ID)
-Route::put('/producto/{id}', 'ProductoController@update');
+Route::post('/producto/{id}', 'ProductoController@update');
 
 //ELIMINA UN PRODUCTO ESPECÍFICO EN LA BD
 Route::delete('/producto/{id}', 'ProductoController@destroy');
+
+//Ruta de la vista que muestra la lista de literatura universal
+Route::get()

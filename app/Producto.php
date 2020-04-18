@@ -14,7 +14,4 @@ class Producto extends Model
     public function categorias() {
      return $this->belongsTo("App\Categoria", "categoria_id");
  }
- public function subcategorias() {
-  return $this->belongsTo("App\Subcategorias", "subcategoria_id");
-}
 }

@@ -11,8 +11,9 @@ class ProductoController extends Controller {
 
 
         public function directory() {
-            $productos = Producto::all();
-            return view("listadoProductos", compact("productos"));
+            $productos = Producto::paginate(6);
+            $categorias = Categoria::all();
+            return view('listadoProductos', compact('productos', 'categorias'));
         }
 
             public function  create() {
@@ -61,31 +62,31 @@ class ProductoController extends Controller {
                         return redirect('/producto/crear')->with(compact('producto'));
         }
 
-
+          //Muestra el detalle de un producto
                 public function show($id) {
                   $producto = Producto::find($id);
-                  $productos = Producto::all();
-                   return view('detalleProducto', compact('producto', 'productos'));
-
+                   return view('detalleProducto', compact('producto'));
               }
 
-        public function edit($id) {
-          $producto = Producto::find($id);
-          $categorias = Categoria::all();
-           return view('editarProducto', compact('producto', 'categorias'));
-      }
+                  
+                public function edit($id) {
+                  $producto = Producto::find($id);
+                  $categorias = Categoria::all();
+                  return view('editarProducto', compact('producto', 'categorias'));
+              }
 
-        public function update(Request $form) {
-          $producto = Producto::find($form["id"]);
-          $producto->nombre = $form["nombre"];
-          $producto->imagen = $form["imagen"];
-          $producto->descripcion = $form["descripcion"];
-          $producto->precio = $form["precio"];
-          $producto->stock = $form["stock"];
+                 public function update(Request $form) {
+                  $producto = Producto::find($form["id"]);
+                  $producto->nombre = $form["nombre"];
+                  $producto->imagen = $form["imagen"];
+                  $producto->descripcion = $form["descripcion"];
+                  $producto->categoria_id = $form["categoria_id"];
+                  $producto->precio = $form["precio"];
+                  $producto->stock = $form["stock"];
 
-           $producto->save();
-         return redirect('/producto/{id}')->with(compact("producto"));
-       }
+                  $producto->save();
+                return redirect('/producto/{id}')->with(compact("producto"));
+               }
 
                   public function destroy($id) {
                      $producto = Producto::find($id);

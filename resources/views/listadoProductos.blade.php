@@ -15,22 +15,22 @@
          <th>Categorías</th>
        </tr>
        <tr>
-        <td><a href="">Literatura Universal</a></td>
+        <td><a href="">{{"Literatura Universal"}}</a></td>
        </tr>
        <tr>
-         <td><a href="">Literatura Infantil/Juvenil</a></td>
+         <td><a href="">{{"Literatura Infantil/Juvenil"}}</a></td>
        </tr>
        <tr>
-         <td><a href="">Historia Universal</a></td>
+         <td><a href="">{{"Historia Universal"}}</a></td>
        </tr>
        <tr>
-         <td><a href="">Útiles Escolares</a></td>
+         <td><a href="">{{"Útiles Escolares"}}</a></td>
        </tr>
        <tr>
-         <td><a href="">Libretas y Agendas</a></td>
+         <td><a href="">{{"Libretas y Agendas"}}</a></td>
        </tr>
        <tr>
-         <td><a href="">Tarjetas personalizadas</a></td>
+         <td><a href="">{{"Tarjetas personalizadas"}}</a></td>
        </tr>
       </table>
 
@@ -54,7 +54,9 @@
           </div>
           @endforeach
         </section>
+        {{$productos->links()}}
         </div>
+       
 
     </div>
 

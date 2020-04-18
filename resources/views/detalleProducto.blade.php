@@ -10,9 +10,9 @@
 <br>
 <section>
     <h2>Detalle de producto</h2>
-    <div class="row">
+    <div class="container">
     <ul>
-<div class="">
+<div class="" >
         <li>
     <strong>{{"Nombre"}}:</strong>
      {{$producto->nombre}}
@@ -21,7 +21,8 @@
     {{$producto->descripcion}}
     <br>
     <strong>{{"Categoria"}}:</strong>
-    {{$producto->categoria}}
+    {{ $producto->categoria}}
+   
     <br>
     <strong>{{"Precio"}}:</strong>
         ${{$producto->precio}}

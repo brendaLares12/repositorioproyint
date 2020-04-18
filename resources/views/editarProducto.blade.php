@@ -16,7 +16,7 @@
   <div class="contenedor-form">
   <form action="/producto/{{$producto->id}}" method="post" enctype="multipart/form-data">
       {{csrf_field()}}
-      {{ method_field('PUT') }}
+     
       <strong><label for="nombre">{{"Nombre"}}: </label></strong>
 
       <br>
