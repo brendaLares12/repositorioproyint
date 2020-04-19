@@ -16,6 +16,9 @@
     <link rel="icon" type="image/png" href="storage/icono-pag">
   </head>
   <body>
+
+<!------------INICIO HEADER--------------------------------->
+
 <header class="fixed-top">
     <img src="/storage/libro-grande.png" alt="icono">
     <h1><a  class= "logo" href="/plantilla">Libreria Lablic</a></h1>
@@ -41,6 +44,8 @@
     </div>
 
     <button onclick="location.href='carrito.php'" type="button" class="btn btn-transparent btn-compra"><i class="fas fa-shopping-cart"></i></button>
+    
+<!-----------BARRA DE NAVEGACIÓN--------------------------------->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <a class="navbar-brand" href="/plantilla">Home</a>
@@ -49,34 +54,50 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/productos">Nuestros productos</a>
+          </li>
+        
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Libros</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="listado-productos.php#LiteraturaUni">Literatura Universal</a>
-              <a class="dropdown-item" href="listado-productos.php#LiteraturaInf">Literatura Infantil/Juvenil</a>
-              <a class="dropdown-item" href="listado-productos.php#HistoriaUni">Historia Universal</a>
+              <a class="dropdown-item" href="/litUniversal">Literatura Universal</a>
+              <a class="dropdown-item" href="/litJuvenil">Literatura Infantil/Juvenil</a>
+              <a class="dropdown-item" href="historiaUniversal">Historia Universal</a>
               <div class="dropdown-divider"></div>
             </div>
+            
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Papelería</a>
+            
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="/productos">Útiles Escolares</a>
-              <a class="dropdown-item" href="listado-productos.php#LibyAg">Libretas y Agendas</a>
-              <a class="dropdown-item" href="listado-productos.php#Tarj-Kraft">Tarjetas personalizadas</a>
+              <a class="dropdown-item" href="/utiles">Útiles Escolares</a>
+              <a class="dropdown-item" href="/libAgendas">Libretas y Agendas</a>
+              <a class="dropdown-item" href="/tarjetas">Tarjetas personalizadas</a>
               <div class="dropdown-divider"></div>
             </div>
 
           <li class="nav-item">
-            <a class="nav-link" href="faq.php">F.A.Q</a>
+            <a class="nav-link" href="">F.A.Q</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.php">Contacto</a>
+            <a class="nav-link" href="">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Usuarios</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php if(isset($_SESSION['usuario'])) {echo "perfil-usuario.php";} else {echo "";}?>"><?php if(isset($_SESSION['usuario'])) {echo "Perfil Usuario";}?></a>
           </li>
+
         </ul>
+
+<!------------BUSCADOR DE LA NAVEGACION--------------------------------->
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Ingresa palabra clave">
           <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">

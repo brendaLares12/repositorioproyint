@@ -1,5 +1,5 @@
 <!-- <div class="container"> -->
-      @extends("layouts.headyfoot")
+      @extends("layouts.header")
 
     <main style="margin-top:200px" >
         <div id="carouselExampleIndicators" class="carousel slide d-none d-md-block" data-ride="carousel">
@@ -49,27 +49,27 @@
   <h2>Libros</h2>
         <div class="card-deck">
           <div class="card">
-            <img src="img/clasicos.jpg" class="card-img-top" alt="..." height="220px">
+            <a href="/litUniversal"><img src="img/clasicos.jpg" class="card-img-top" alt="..." height="220px"></a>
           <div class="card-body">
-          <h5 class="card-title">Literatura Universal</h5>
+          <h5 class="card-title"><strong>{{"Literatura Universal"}}</strong></h5>
           <p class="card-text">Encontrarás las obras más destacadas de la literatura universal.</p>
-          <div class = "button-link"><a href="listado-productos.php#LiteraturaUni" class="btn btn-primary">Ver productos</a></div>
+          <div class = "button-link"><a href="/litUniversal" class="btn btn-primary">Ver productos</a></div>
           </div>
         </div>
         <div class="card">
-          <img src="img/clasicosjuveniles.jpg" class="card-img-top" alt="..." height="220px">
+          <a href="/litJuvenil"><img src="img/clasicosjuveniles.jpg" class="card-img-top" alt="..." height="220px"></a>
           <div class="card-body">
-          <h5 class="card-title">Literatura Infantil/Juvenil</h5>
+          <h5 class="card-title"><strong>{{"Literatura Infantil/Juvenil"}}</strong></h5>
           <p class="card-text">En nuestro sitio encontrarás libros para chicos de todas las edades.</p>
-          <div class = "button-link_2"><a href="listado-productos.php#LiteraturaInf" class="btn btn-primary">Ver productos</a></div>
+          <div class = "button-link_2"><a href="/litJuvenil" class="btn btn-primary">Ver productos</a></div>
         </div>
         </div>
         <div class="card">
-          <img src="img/historia2.jpg" class="card-img-top" alt="..." height="220px">
+          <a href="/historiaUniversal"><img src="img/historia2.jpg" class="card-img-top" alt="..." height="220px"></a>
           <div class="card-body">
-          <h5 class="card-title">Historia Universal</h5>
+          <h5 class="card-title"><strong>{{"Historia Universal"}}</strong></h5>
           <p class="card-text"> Encontrarás la recopilación de los hechos de mayor importancia que ha atravesado el hombre desde sus orígenes hasta la actualidad.</p>
-          <div class = "button-link"><a href="listado-productos.php#HistoriaUni" class="btn btn-primary">Ver productos</a></div>
+          <div class = "button-link"><a href="/historiaUniversal" class="btn btn-primary">Ver productos</a></div>
         </div>
         </div>
       </div>
@@ -79,29 +79,30 @@
         <h2>Papelería</h2>
               <div class="card-deck">
                 <div class="card">
-                  <img src="img/utiles-escolares.jpg" class="card-img-top" alt="...">
+                  <a href="/utiles"><img src="img/utiles-escolares.jpg" class="card-img-top" alt="..."></a>
                 <div class="card-body">
-                <h5 class="card-title">Útiles Escolares</h5>
+                <h5 class="card-title"><strong>{{"Útiles Escolares"}}</strong></h5>
                 <p class="card-text">Tenemos todo lo necesario para el comienzo de clases.</p>
-                <div class = "button-link"><a class="categoria" href="listado-productos.php#Utiles" class="btn btn-primary">Ver productos</a></div>
+                <div class = "button-link"><a href="/utiles" class="btn btn-primary">Ver productos</a></div>
                 </div>
               </div>
               <div class="card">
-                <img src="img/libretas.jpg" class="card-img-top" alt="...">
+                <a href="/libAgendas"><img src="img/libretas.jpg" class="card-img-top" alt="..."></a>
                 <div class="card-body">
-                <h5 class="card-title">Libretas y Agendas</h5>
+                <h5 class="card-title"><strong>{{"Libretas y Agendas"}}</strong></h5>
                 <p class="card-text">Todo tipo de libretas y agendas para tu escritorio u oficina.</p>
-                <div class = "button-link"><a href="listado-productos.php#LibyAg" class="btn btn-primary">Ver productos</a></div>
+                <div class = "button-link"><a href="/libAgendas" class="btn btn-primary">Ver productos</a></div>
               </div>
               </div>
               <div class="card">
-                <img src="img/tarjetas.jpg" class="card-img-top" alt="...">
+                <a href="/tarjetas"><img src="img/tarjetas.jpg" class="card-img-top" alt="..."></a>
                 <div class="card-body">
-                <h5 class="card-title">Tarjetas personalizadas</h5>
+                <h5 class="card-title"><strong>{{"Tarjetas personalizadas"}}</strong></h5>
                 <p class="card-text">Tarjetas personalizadas de presentación y para regalar.</p>
-                <div class = "button-link"><a href="listado-productos.php#Tarj-Kraft" class="btn btn-primary">Ver productos</a></div>
+                <div class = "button-link"><a href="/tarjetas" class="btn btn-primary">Ver productos</a></div>
               </div>
               </div>
             </div>
             </section>
     </main>
+    @extends("layouts.footer")

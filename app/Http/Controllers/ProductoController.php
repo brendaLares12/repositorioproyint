@@ -69,16 +69,48 @@ class ProductoController extends Controller {
 
         //Muestra la vista de literatura universal
               public function litUniversal() {
-                $productos = Producto::where('id', '>=', '20', 'and', 'id', '<=', '22')->get();
+                $productos = Producto::where('categoria_id', '=', '1')->get();
                  return view('literaturaUniversal', compact('productos'));
             }
 
+            //Muestra la vista de literatura infantil/juvenil
+            public function litJuvenil() {
+                $productos = Producto::where('categoria_id', '=', '2')->get();
+                 return view('literaturaInfantil-Juvenil', compact('productos'));
+            }
+
+            //Muestra la vista de historia universal
+            public function histUniversal() {
+                $productos = Producto::where('categoria_id', '=', '3')->get();
+                 return view('historiaUniversal', compact('productos'));
+            } 
+          
+            //Vista de Útiles escolares
+            public function utiles() {
+                $productos = Producto::where('categoria_id', '=', '4')->get();
+                 return view('utiles', compact('productos'));
+            }
+
+            //Vista de Libretas y agendas
+            public function libretasAgendas() {
+                $productos = Producto::where('categoria_id', '=', '5')->get();
+                 return view('libretasAgendas', compact('productos'));
+            }
+
+            //Vista de Tarjetas personalizadas
+            public function tarjetas() {
+                $productos = Producto::where('categoria_id', '=', '6')->get();
+                 return view('tarjetas', compact('productos'));
+            }
+            
         //Modifica producto      
                 public function edit($id) {
                   $producto = Producto::find($id);
-                  $categorias = Categoria::all();
+                  $categorias = Categoria::find($id);
                   return view('editarProducto', compact('producto', 'categorias'));
               }
+
+
         //Guarda modificación de producto
                  public function update(Request $form) {
                   $producto = Producto::find($form["id"]);
@@ -97,10 +129,7 @@ class ProductoController extends Controller {
                   public function destroy($id) {
                      $producto = Producto::find($id);
                      $producto->delete();
-                    return redirect('/productos');
+                    return redirect('/productos');     
         }
-
-
-
-
+        
 }

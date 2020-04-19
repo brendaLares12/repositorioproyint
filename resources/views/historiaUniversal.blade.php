@@ -4,7 +4,7 @@
 
     <div class="listado-productos">
       
-    <h5 class="detalle-libros"><span class="detalle-libros1">{{"Literatura Universal"}}</span></h5>
+    <h5 class="detalle-libros"><span class="detalle-libros1">{{"Historia Universal"}}</span></h5>
  <br>
   <div class="">
       <table class="d-none d-lg-block" style="width:25%">
@@ -49,14 +49,8 @@
           </div>
           @endforeach
         </section>
-        
         </div>
-       
-
     </div>
-
       </div>
-
     </main>
-
     @extends("layouts.footer")

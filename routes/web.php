@@ -51,3 +51,18 @@ Route::delete('/producto/{id}', 'ProductoController@destroy');
 
 //Ruta de vista de literatura universal
 Route::get('/litUniversal', 'ProductoController@litUniversal');
+
+//Ruta de vista de literatura Infantil/Juvenil
+Route::get('/litJuvenil', 'ProductoController@litJuvenil');
+
+//Ruta de vista de literatura Historia universal
+Route::get('/historiaUniversal', 'ProductoController@histUniversal');
+
+//Ruta de vista de Útiles escolares
+Route::get('/utiles', 'ProductoController@utiles');
+
+//Ruta de vista de Libretas y agendas
+Route::get('/libAgendas', 'ProductoController@libretasAgendas');
+
+//Ruta de vista de Tarjetas personalizadas
+Route::get('/tarjetas', 'ProductoController@tarjetas');

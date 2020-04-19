@@ -4,7 +4,7 @@
 
     <div class="listado-productos">
       
-    <h5 class="detalle-libros"><span class="detalle-libros1">{{"Literatura Universal"}}</span></h5>
+    <h5 class="detalle-libros"><span class="detalle-libros1">{{"Tarjetas personalizadas"}}</span></h5>
  <br>
   <div class="">
       <table class="d-none d-lg-block" style="width:25%">
@@ -36,27 +36,22 @@
           @foreach ($productos as $producto)
           <div class="col-sm-9 col-md-6 col-lg-4">
           <div class="card" style="width:250px" align="center">
-        <table>
+         <table>
             <tr>
             <a href="/producto/{{$producto->id}}"><img class="image" src="storage/{{$producto->imagen}}" alt="" width="250px" height="250px"></a>
             </tr>
-        </table>
+         </table>
             <div class="card-body">
               <h4 class="card-title" ><strong>{{$producto->nombre}}</strong></h4>
               <p class="card-text">${{$producto->precio}}</p>
             </div>
-          </div>
-          </div>
-          @endforeach
-        </section>
-        
-        </div>
-       
-
-    </div>
-
-      </div>
-
-    </main>
-
-    @extends("layouts.footer")
+           </div>
+         </div>
+       @endforeach
+     </section>  
+   </div>
+  </section>    
+  </div>
+  </div>
+ </div>
+</main>

@@ -9,10 +9,11 @@
 <br>
 <br>
 <section>
+    <div class="container">
     <h2>Detalle de producto</h2>
     <div class="container">
     <ul>
-<div class="" >
+<div style= "float:right">
         <li>
     <strong>{{"Nombre"}}:</strong>
      {{$producto->nombre}}
@@ -21,7 +22,7 @@
     {{$producto->descripcion}}
     <br>
     <strong>{{"Categoria"}}:</strong>
-    {{ $producto->categoria}}
+    {{ $producto->categoria_id}}
    
     <br>
     <strong>{{"Precio"}}:</strong>
@@ -29,17 +30,12 @@
 </div>
     <br>
     <div>
-        <img src="/storage/{{$producto->imagen}}" height="250px">
+        <img src="/storage/{{$producto->imagen}}" height= "550px" style="border:black">
        </div>
        <br>
+       <div>
        <input type="submit" value="Agregar al carrito">
-       <br>
-       <br>
-    <form action="/producto/{{$producto->id}}" method="post">
-        {{csrf_field()}}
-       {{method_field('DELETE')}}
-       <input type="submit" value="Eliminar">
-    </form>
+     </div>
        <br>
        <br>
        <a href="/productos"><input type="submit" value="Volver"></a>
@@ -47,4 +43,5 @@
     </ul>
 </div>
 </section>
+</div>
 @extends("layouts.footer")

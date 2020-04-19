@@ -10,27 +10,28 @@
     <h5 class="detalle-libros"><span class="detalle-libros1">Listado de productos</span></h5>
 
   <div class="">
-      <table class="d-none d-lg-block" style="width:25%">
-       <tr>
-         <th>Categorías</th>
-       </tr>
+      <table class="d-none d-lg-block">
+       <div>
        <tr>
         <td><a href="/litUniversal">{{"Literatura Universal"}}</a></td>
        </tr>
+      </div>
+      <div>
        <tr>
-         <td><a href="">{{"Literatura Infantil/Juvenil"}}</a></td>
+         <td><a href="/litJuvenil">{{"Literatura Infantil/Juvenil"}}</a></td>
+       </tr>
+      </div>
+       <tr>
+         <td><a href="/historiaUniversal">{{"Historia Universal"}}</a></td>
        </tr>
        <tr>
-         <td><a href="">{{"Historia Universal"}}</a></td>
+         <td><a href="/utiles">{{"Útiles Escolares"}}</a></td>
        </tr>
        <tr>
-         <td><a href="">{{"Útiles Escolares"}}</a></td>
+         <td><a href="/libAgendas">{{"Libretas y Agendas"}}</a></td>
        </tr>
        <tr>
-         <td><a href="">{{"Libretas y Agendas"}}</a></td>
-       </tr>
-       <tr>
-         <td><a href="">{{"Tarjetas personalizadas"}}</a></td>
+         <td><a href="/tarjetas">{{"Tarjetas personalizadas"}}</a></td>
        </tr>
       </table>
 
@@ -41,7 +42,7 @@
           <div class="card" style="width:250px" align="center">
 
             <table>
-            <tr>
+            <tr style="padding-top:10px">
             <a href="/producto/{{$producto->id}}"><img class="image" src="storage/{{$producto->imagen}}" alt="" width="250px" height="250px"></a>
           </tr>
         </table>
@@ -54,7 +55,10 @@
           </div>
           @endforeach
         </section>
-        {{$productos->links()}}
+        <div class="container">
+         {{$productos->links()}} 
+        </div>
+        
         </div>
        
 
