@@ -73,6 +73,7 @@ class ProductoController extends Controller {
                      return view('crud-productos', compact('productos'));
                  }
 
+
         //Modifica producto      
                 public function edit($id) {
                   $producto = Producto::find($id);

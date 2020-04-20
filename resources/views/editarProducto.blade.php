@@ -58,9 +58,8 @@
             @endforeach
           </select>
     </div>
-    <br>
-  <input type="submit" value="Editar producto">
+    <button type="submit">Guardar</button>
+    <a href="/crud-productos" class="btn btn-default">Cancelar</a>
   </form>
   </div>
 </div>
-@extends("layouts.footer")

@@ -31,7 +31,7 @@
       <tr>
         <th scope="row" style="background-color:yellowgreen">{{$producto->id}}</th>
         <td style="background-color:pink">{{$producto->nombre}}</td>
-        <td style="background-color:pink">{{$producto->categoria_id}}</td>
+        <td style="background-color:pink">{{$producto->categorias->nombre}}</td>
         <td style="background-color:pink">{{$producto->stock}}</td>
         <td style="background-color:pink">${{$producto->precio}}</td>
         <td style="background-color:pink">

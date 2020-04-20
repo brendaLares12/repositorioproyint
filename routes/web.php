@@ -69,3 +69,23 @@ Route::get('/tarjetas', 'ProductoController@tarjetas');
 
 //Ruta de crud de productos
 Route::get('/crud-productos','ProductoController@crudProductos');
+
+/////////////////////////////////////////////////////////////////////////
+
+//MUESTRA LA VISTA CON EL FORMULARIO PARA CREAR UNA CATEGORIA
+Route::get('/categoria/crear', 'CategoriaController@create');
+
+//CREA Y ALMACENA UNA CATEGORIA DENTRO DE LA BD
+Route::post('/categoria/crear', 'CategoriaController@store');
+
+//Ruta de crud de categorias
+Route::get('/crud-categorias','CategoriaController@crudCategorias');
+
+//MUESTRA EL FORMULARIO PARA EDITAR UNA CATEGORIA
+Route::get('/categoria/{id}/editar', 'CategoriaController@edit');
+
+//ACTUALIZA LA CATEGORIA EN LA BD (SE LO BUSCA POR SU ID)
+Route::post('/categoria/{id}', 'CategoriaController@update');
+
+//ELIMINA UNA CATEGORÍA EN LA BD
+Route::delete('/categoria/{id}', 'CategoriaController@destroy');

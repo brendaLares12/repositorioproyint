@@ -89,6 +89,9 @@
             <a class="nav-link" href="/crud-productos">Productos</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="/crud-categorias">Categorías</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="">Usuarios</a>
           </li>
           <li class="nav-item">

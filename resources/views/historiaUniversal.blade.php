@@ -6,8 +6,9 @@
       
     <h5 class="detalle-libros"><span class="detalle-libros1">{{"Historia Universal"}}</span></h5>
  <br>
+
   <div class="">
-      <table class="d-none d-lg-block" style="width:25%">
+      <table class="d-none d-lg-block" style="width:20%">
        <tr>
          <th>Categorías</th>
        </tr>

@@ -260,7 +260,9 @@ textarea {
   overflow: auto;
   resize: both;
 }
-
+.form-control {
+  width: 20%;
+}
 /*RECUPERAR-CONTRASEÑA*/
 
 .container-form {
@@ -394,15 +396,6 @@ h4{
   font-size: 12px;
   text-align: center;
   margin: 2px;
-}
-
-/*CARRITO*/
-.table {
-  background-color: white;
-}
-.precio strong{
-  position: relative;
-  right: 10px;
 }
 
 .fa-shopping-cart:hover{
