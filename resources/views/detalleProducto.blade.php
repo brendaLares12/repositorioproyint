@@ -22,8 +22,7 @@
     {{$producto->descripcion}}
     <br>
     <strong>{{"Categoria"}}:</strong>
-    {{ $producto->categoria_id}}
-   
+    
     <br>
     <strong>{{"Precio"}}:</strong>
         ${{$producto->precio}}
@@ -41,7 +40,8 @@
        <a href="/productos"><input type="submit" value="Volver"></a>
         </li>
     </ul>
+    </div>
 </div>
 </section>
-</div>
+
 @extends("layouts.footer")

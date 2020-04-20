@@ -67,46 +67,16 @@ class ProductoController extends Controller {
                    return view('detalleProducto', compact('producto'));
               }
 
-        //Muestra la vista de literatura universal
-              public function litUniversal() {
-                $productos = Producto::where('categoria_id', '=', '1')->get();
-                 return view('literaturaUniversal', compact('productos'));
-            }
+            ////////////////// C-R-U-D  P-R-O-D-U-C-T-O-S ////////////////////
+                 public function crudProductos() {
+                    $productos = Producto::all();
+                     return view('crud-productos', compact('productos'));
+                 }
 
-            //Muestra la vista de literatura infantil/juvenil
-            public function litJuvenil() {
-                $productos = Producto::where('categoria_id', '=', '2')->get();
-                 return view('literaturaInfantil-Juvenil', compact('productos'));
-            }
-
-            //Muestra la vista de historia universal
-            public function histUniversal() {
-                $productos = Producto::where('categoria_id', '=', '3')->get();
-                 return view('historiaUniversal', compact('productos'));
-            } 
-          
-            //Vista de Útiles escolares
-            public function utiles() {
-                $productos = Producto::where('categoria_id', '=', '4')->get();
-                 return view('utiles', compact('productos'));
-            }
-
-            //Vista de Libretas y agendas
-            public function libretasAgendas() {
-                $productos = Producto::where('categoria_id', '=', '5')->get();
-                 return view('libretasAgendas', compact('productos'));
-            }
-
-            //Vista de Tarjetas personalizadas
-            public function tarjetas() {
-                $productos = Producto::where('categoria_id', '=', '6')->get();
-                 return view('tarjetas', compact('productos'));
-            }
-            
         //Modifica producto      
                 public function edit($id) {
                   $producto = Producto::find($id);
-                  $categorias = Categoria::find($id);
+                  $categorias = Categoria::all();
                   return view('editarProducto', compact('producto', 'categorias'));
               }
 
@@ -132,4 +102,43 @@ class ProductoController extends Controller {
                     return redirect('/productos');     
         }
         
+        //////////////////////////////////////////////////////////////////////////////////
+
+                //Muestra la vista de literatura universal
+                public function litUniversal() {
+                    $productos = Producto::where('categoria_id', '=', '1')->get();
+                    return view('literaturaUniversal', compact('productos'));
+                }
+
+                //Muestra la vista de literatura infantil/juvenil
+                public function litJuvenil() {
+                    $productos = Producto::where('categoria_id', '=', '2')->get();
+                    return view('literaturaInfantil-Juvenil', compact('productos'));
+                }
+
+                //Muestra la vista de historia universal
+                public function histUniversal() {
+                    $productos = Producto::where('categoria_id', '=', '3')->get();
+                    return view('historiaUniversal', compact('productos'));
+                } 
+
+                //Vista de Útiles escolares
+                public function utiles() {
+                    $productos = Producto::where('categoria_id', '=', '4')->get();
+                    return view('utiles', compact('productos'));
+                }
+
+                //Vista de Libretas y agendas
+                public function libretasAgendas() {
+                    $productos = Producto::where('categoria_id', '=', '5')->get();
+                    return view('libretasAgendas', compact('productos'));
+                }
+
+                //Vista de Tarjetas personalizadas
+                public function tarjetas() {
+                    $productos = Producto::where('categoria_id', '=', '6')->get();
+                    return view('tarjetas', compact('productos'));
+                }
+
+
 }

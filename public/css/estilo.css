@@ -85,8 +85,13 @@ transition:opacity .5s
   position: absolute;
   top: 0px;
   left: 0px;
-
 }
+
+/*boton crud productos*/
+.btn-primary1{
+ margin-right: 50px;
+}
+
 /*color boton busqueda y de boton ver productos*/
 .btn-primary{
   color: #fff;

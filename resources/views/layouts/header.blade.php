@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Literata:400,700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset("css/estilo.css")}}">
-    <title>Libreria Lablic</title>
+    <link type="" src="/storage/libro-grande.png"><title>Libreria Lablic</title>
     <link rel="icon" type="image/png" href="storage/icono-pag">
   </head>
   <body>
@@ -86,7 +86,7 @@
             <a class="nav-link" href="">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Productos</a>
+            <a class="nav-link" href="/crud-productos">Productos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="">Usuarios</a>

@@ -9,7 +9,7 @@
 <br>
 <section>
 <div>
-  <h2>Agregar productos: </h2>
+  <h2>Agregar producto: </h2>
  </div>
 
     <ul style="color:red" class="errores">

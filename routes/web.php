@@ -66,3 +66,6 @@ Route::get('/libAgendas', 'ProductoController@libretasAgendas');
 
 //Ruta de vista de Tarjetas personalizadas
 Route::get('/tarjetas', 'ProductoController@tarjetas');
+
+//Ruta de crud de productos
+Route::get('/crud-productos','ProductoController@crudProductos');
