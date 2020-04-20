@@ -99,7 +99,7 @@ class ProductoController extends Controller {
                   public function destroy($id) {
                      $producto = Producto::find($id);
                      $producto->delete();
-                    return redirect('/productos');     
+                    return redirect('/crud-productos');     
         }
         
         //////////////////////////////////////////////////////////////////////////////////

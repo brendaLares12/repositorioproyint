@@ -9,7 +9,8 @@
 <br>
 <br>
 <section>
-<table class="table" style="width:px">
+ 
+<table class="table">
   <button class="btn btn-primary1" style="background-color:rosybrown">
     <a href="/producto/crear">Nuevo producto</a>
   </button>
@@ -32,7 +33,7 @@
         <td style="background-color:pink">{{$producto->nombre}}</td>
         <td style="background-color:pink">{{$producto->categoria_id}}</td>
         <td style="background-color:pink">{{$producto->stock}}</td>
-        <td style="background-color:pink">{{$producto->precio}}</td>
+        <td style="background-color:pink">${{$producto->precio}}</td>
         <td style="background-color:pink">
 
         <form action="" method="post">
@@ -40,19 +41,20 @@
             <div class="d-flex flex-row">
                <button style="background-color:rosybrown" class="btn btn-primary1">
                  <a href="/producto/{{$producto->id}}">Ver</a></button>
-
                <button style="background-color:rosybrown" class="btn btn-primary1"> 
                 <a href="/producto/{{$producto->id}}/editar">Editar</a></button>
-                <button style="background-color:rosybrown" class="btn btn-primary1">
-                  <a href="/crud-productos" type="submit">Eliminar</a></button> 
             </div>
         </form>
-       
+        <form action="/producto/{{$producto->id}}" method="post">
+          {{csrf_field()}}
+          {{method_field('DELETE')}}
+        <button style="background-color:rosybrown" class="btn btn-primary1" type="submit">Eliminar</button> 
       </tr>
       @endforeach
     </tbody>
   </table>
 </section>
+
 
 
   
