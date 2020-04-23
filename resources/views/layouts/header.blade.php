@@ -36,7 +36,7 @@
           <a class="dropdown-item" href="perfil-usuario.php">
             <span class="rounded-circle border border-primary" style="background-image: url('imagenPerfil/5df98608d726c.png'); background-size: cover;  width:42px; height: 42px;"></span>
             <!--<img src="img/icono-usuario.jpg" alt="..." class="rounded-circle" >-->
-            Hola <?= $_SESSION['nombre']; ?>
+            Hola {{Auth::user()->name}}
           </a>
           <a class="dropdown-item btn-danger" href="logout.php" value="salir">Salir</a>
         @endif
