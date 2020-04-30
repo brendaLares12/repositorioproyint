@@ -55,18 +55,15 @@ color: black;
 }
 
 .navbar-light .navbar-brand {
-  color: black;
-  font-weight: bold;
+  color:  #495057;
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: black;
-  font-weight: bold;
+  color: #495057;
 }
 
 a.dropdown-item{
-  color: black;
-  font-weight: bold;
+  color: #495057;
 }
 
 .nav-link{
