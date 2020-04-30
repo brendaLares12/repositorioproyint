@@ -73,7 +73,7 @@ Route::get('/crud-productos','ProductoController@crudProductos');
 /////////////////////////////////////////////////////////////////////////
 
 //MUESTRA LA VISTA CON EL FORMULARIO PARA CREAR UNA CATEGORIA
-Route::get('/categoria/crear', 'CategoriaController@create');
+Route::get('/categoria/crear', 'CategoriaController@create')->middleware(['auth', 'isAdmin']);
 
 //CREA Y ALMACENA UNA CATEGORIA DENTRO DE LA BD
 Route::post('/categoria/crear', 'CategoriaController@store');
